@@ -15,6 +15,11 @@
         $source = explode('/', $source);
         $destination = explode('/', $destination);
 
+        // Are we referring to the top level directory from within it? (special case)
+        if (count($destination) === 2 && empty($destination[1]) && count($source) === 2) {
+            return '.';
+        }
+
         // What is the last, common directory?
         $i = 0;
         while (
@@ -65,7 +70,9 @@ function print_navbar(Page $currentPage, $pages) {
 <head>
     <meta charset="UTF-8"/>
     <title><?= $currentPage->name ?> - Snow4Days</title>
-    <link rel="stylesheet" href="styling.css"/>
+    <link rel="stylesheet" href="<?= absolute_to_relative($currentPage->url, "/styling.css"); ?>"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
     <!-- insert meta-data here -->
 <?php // include the relevant javascript files
     $javascriptFiles = array(

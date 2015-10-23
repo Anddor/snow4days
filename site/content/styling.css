@@ -1,0 +1,100 @@
+body {
+    background-color: #FAFEFE;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arvo', serif;
+}
+
+
+/* links */
+a:link {
+    color: #349292;
+}
+
+a:link:hover {
+    color: #93D7D7;
+}
+
+a:visited {
+    color: #D49F36;
+}
+
+a:visited:hover {
+    color: #F4BF56;
+}
+
+/* navbar */
+nav ul li {
+    display: inline;
+}
+
+nav:after, header:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 1em 2em;
+    border: solid 1px black;
+    background-color: #349292;
+}
+
+nav ul li a:link, nav ul li a:visited,
+nav ul li a:link:hover, nav ul li a:visited:hover {
+    color: white;
+}
+
+nav ul li a.current {
+    font-weight: bold;
+}
+
+nav ul.level2 {
+    display: inline;
+    overflow: visible;
+}
+
+nav ul.level2:after, nav ul.level1:after {
+    display: block;
+    clear: both;
+}
+
+nav ul.level2 > li {
+    float: left;
+}
+
+nav ul.level1 > li > a {
+    float: left;
+}
+
+
+
+nav ul li {
+    position: relative;
+}
+
+nav ul.level3 {
+    position: absolute;
+    padding-left: 0;
+    top: 100%;
+    left: 0px;
+    z-index: 10;
+    width: 150%;
+
+    opacity: 0;
+    display: none;
+}
+
+nav ul.level2 > li:hover > ul.level3 {
+    opacity: 1;
+    display: block;
+}
+
+nav ul.level3 li a {
+    display: block;
+}
