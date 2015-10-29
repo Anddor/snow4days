@@ -27,6 +27,15 @@ a:visited:hover {
     color: #F4BF56;
 }
 
+/* images */
+a img {
+    border: none;
+}
+
+img {
+    max-width: 100%;
+}
+
 /* navbar */
 nav {
     width: 100%;
