@@ -1,0 +1,6 @@
+.hide {
+    display:none; 
+    border-radius: 5px;
+    padding-left: 4px;
+    border: solid 1px grey;
+}
