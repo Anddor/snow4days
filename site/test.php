@@ -90,7 +90,7 @@ EOL;
     Just remember to remove it before commiting it to Git!</p>
     <p>
         <label for="template">Which page?</label><br/>
-        <select id="template" name="template" onchange="this.submit();">
+        <select id="template" name="template" onchange="this.form.submit();">
             <option selected value="">- PICK ONE -</option>
 <?php
         foreach (Page::$webpages as $url => $page) {
