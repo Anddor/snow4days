@@ -1,0 +1,59 @@
+#videoWrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto
+}
+#mainVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    z-index: -1;
+}
+.centered{
+    margin: auto;
+}
+
+#navbar {
+    width: 100%;
+    top: 200px;
+    position: fixed;
+    text-align: center;
+}
+
+#logo {
+    width: 1074px;
+    height: auto;
+}
+#bar {
+    width: 100%;
+    height: 42px;
+    display: block;
+    background-color: rgba(172, 216, 255, 0.5)
+}
+
+#navbar ul {
+    width: 800;
+    list-style-type: none;
+}
+#navbar li {
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+    
+}
+#navbar li a {
+    font-family: "Arvo", serif;
+    list-style: none;
+    text-align: center;
+    display: block;
+    color: black;
+    border: solid 1px black;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+}
+#navbar li a:hover {
+    background-color: aliceblue;
+}
