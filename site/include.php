@@ -58,7 +58,9 @@ function default_layout(Page $page) {
     require('navbar.php');
     print_navbar($page, Page::$webpages);
     if (file_exists($page->file)) {
-        readfile($page->file);
+        $file_contents = file_get_contents($page->file);
+        // Truncate everything before and after the <main> element
+        echo preg_replace("/^.*(<main.*<\\/main>).*\$/i", '$1', $file_contents, 1);
     } else {
         echo "<p>This page does not exist yet.</p>";
     }
