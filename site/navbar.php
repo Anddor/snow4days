@@ -69,6 +69,7 @@ function print_navbar(Page $currentPage, $pages) {
 <html>
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $currentPage->name ?> - Snow4Days</title>
     <link rel="stylesheet" href="<?= absolute_to_relative($currentPage->url, "/styling.css"); ?>"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
