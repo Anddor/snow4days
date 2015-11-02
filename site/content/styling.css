@@ -72,8 +72,6 @@ nav ul.level1 > li > a {
     float: left;
 }
 
-
-
 nav ul li {
     position: relative;
 }
@@ -158,6 +156,7 @@ nav ul.level3 li a {
 #navbar li a:hover {
     background-color: aliceblue;
 }
+/* start på css for locations */
 main#location section#locationDescription {
     width: 40%;
     margin-left: 1%;
@@ -176,7 +175,6 @@ main#location section#locationOrder {
     float:right;
     width: 50%;
     font-size: 10px;
-    margin:
 }
 main#location section#locationOrder section#locationOrderText {
     width: 35%;
@@ -192,3 +190,4 @@ main#location section#map img {
     height: 80%;
     width: 80%;
 }
+/* slutt på css for locations */
