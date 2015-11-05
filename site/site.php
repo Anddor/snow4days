@@ -22,11 +22,9 @@ function main($server) {
         }
         $resource = parseUrl($server['REQUEST_URI']);
         // Assume it is a file if it has a file extension
-        $fileExtension = explode(".", $resource);
-        if (count($fileExtension) > 1) {
+        if (strpos($resource, ".") !== false) {
             // It is a file, don't output using PHP
             header("HTTP/1.1 307 Temporary Redirect");
-            $fileExtension = $fileExtension[1];
             $filepath = CONTENT_DIR . $resource;
             if (file_exists($filepath)) {
                 header("Location: " . URL_ROOT . "content" . $resource);
