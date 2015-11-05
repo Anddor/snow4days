@@ -171,7 +171,7 @@ main#country #countryDescription{
 main#country #countryMap{
     float: left;
     width: 50%;
-    background-color: sandybrown;
+    background-color: RGBA(170,170,170,0.2);
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -185,13 +185,13 @@ main#country #countryMap img{
 main#country #countryLocation{
     float: left;
     width: 78%;
-    background-color: lightcoral;
+    background-color: RGBA(170,170,170,0.2);
     margin-bottom: 10px;
     margin-top: 10px;
 }
 main#country #countryOrder{
     float: right;
     width: 20%;
-    background-color: yellowgreen;
+    background-color: RGBA(170,170,170,0.2);
     margin-top: 10px;
 }
