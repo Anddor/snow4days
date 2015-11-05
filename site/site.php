@@ -24,12 +24,13 @@ function main($server) {
         // Assume it is a file if it has a file extension
         $fileExtension = explode(".", $resource);
         if (count($fileExtension) > 1) {
-            // It is a file
+            // It is a file, don't output using PHP
+            header("HTTP/1.1 307 Temporary Redirect");
             $fileExtension = $fileExtension[1];
             $filepath = CONTENT_DIR . $resource;
             if (file_exists($filepath)) {
-                sendMimeType($fileExtension);
-                readfile($filepath);
+                header("Location: " . URL_ROOT . "content" . $resource);
+                die();
             } else {
                 header("HTTP/1.1 404 File Not Found");
                 die();
