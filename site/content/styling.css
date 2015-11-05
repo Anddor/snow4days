@@ -159,8 +159,15 @@ nav ul.level3 li a {
 /* start på css for locations */
 main#location section#locationDescription {
     width: 40%;
-    margin-left: 1%;
+    margin-right: 6%;
+    margin-left:2%;
+    margin-top: 2%;
     float: left;
+    background-color: rgba(190,190,190,0.2);
+    border-radius: 15px;
+    padding: 1%;
+    
+    
 }
 main#location section#locationDescription ul {
     list-style: none;   
@@ -172,12 +179,18 @@ main#location section#locationDescription h1#locationName {
     letter-spacing: 1px;
 }
 main#location section#locationOrder {
-    float:right;
-    width: 50%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 3px;
+    float:left;
+    width: 20%;
     font-size: 10px;
+    background-color: rgba(190,190,190,0.2);
+    border-radius: 15px;
+    
 }
 main#location section#locationOrder section#locationOrderText {
-    width: 35%;
+    width: 100%;
 }
 main#location section#map {
     width: 50%;
