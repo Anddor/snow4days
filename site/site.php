@@ -31,7 +31,8 @@ function main($server) {
                 sendMimeType($fileExtension);
                 readfile($filepath);
             } else {
-                throw new NotFoundException();
+                header("HTTP/1.1 404 File Not Found");
+                die();
             }
         } else {
             // Is this an existing url?
