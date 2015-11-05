@@ -1,0 +1,68 @@
+/* make the page centered, but only on large enough screens */
+@media screen and (min-width: 650px) 
+{
+    html
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body
+    {
+        margin: auto;
+        width: 650px;
+    }
+}
+/* use serif on print, but sans-serif on screens */
+@media screen 
+{
+    body, header, h1, h2, h3, h4, h5
+    {
+        font-family: Helvetica, sans-serif;
+    }
+    body
+    {
+        padding-bottom: 30px;
+    }
+}
+@media print
+{
+    body, header, h1, h2, h3, h4, h5
+    {
+        font-family: Georgia, Cambria, serif;
+    }
+}
+
+header h1, h5
+{
+    margin: 0px;
+}
+
+main h2
+{
+    border-bottom: 1px #416E85 solid;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+footer
+{
+    margin-top: 3em;
+    border-top: 1px #555 solid;
+    font-size: 0.7em;
+}
+
+table, tr, td, th {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0.5em;
+}
+
+img {
+    width: 100%;
+}

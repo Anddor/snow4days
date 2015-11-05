@@ -1,0 +1,225 @@
+body {
+    background-color: #FAFEFE;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background-image: url(photo-1434394673726-e8232a5903b4.jpeg);
+    background-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arvo', serif;
+}
+
+
+/* links */
+a:link {
+    color: #349292;
+}
+
+a:link:hover {
+    color: #93D7D7;
+}
+
+a:visited {
+    color: #D49F36;
+}
+
+a:visited:hover {
+    color: #F4BF56;
+}
+
+/* images */
+a img {
+    border: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* navbar */
+nav {
+    width: 100%;
+    display: block;
+    background-color: rgba(172, 216, 255, 0.5);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+}
+
+nav ul.level1 {
+    margin: auto;
+}
+
+nav ul.level1 > li > a {
+    background-image: url("img/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: rgba(0,0,0,0) !important; /* TODO: find a way to do this without !important */
+}
+
+nav ul.level1 > li > a.current {
+    display: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav:after, header:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: solid 1px black;
+    margin: 2px;
+}
+
+nav ul li a:link, nav ul li a:visited,
+nav ul li a:link:hover, nav ul li a:visited:hover {
+    color: black;
+    text-decoration: none;
+    font-family: "Arvo", serif;
+    text-align: center;
+}
+
+nav ul li a:link:hover, nav ul li a:visited:hover {
+    background-color: aliceblue;
+}
+
+nav ul li a.current {
+    font-weight: bold;
+}
+
+nav ul.level2 {
+    display: inline-block;
+    overflow: visible;
+}
+
+nav ul.level2:after, nav ul.level1:after {
+    display: block;
+    clear: both;
+}
+
+nav ul.level2 > li {
+}
+
+nav ul.level2 > li > a {
+    width: 80px;
+}
+
+nav ul.level1 > li > a {
+}
+
+
+
+nav ul li {
+    position: relative;
+}
+
+nav ul.level3 {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: 10;
+    width: 150%;
+    margin-top: 8px;
+
+    opacity: 0;
+    display: none;
+}
+@media screen and (min-device-height: 800px) {
+nav ul.level2 > li:hover > ul.level3 {
+    opacity: 1;
+    display: block;
+}
+}
+
+nav ul.level3 li a {
+    display: block;
+}
+
+#videoWrapper {
+    width: 100%;
+}
+#mainVideo {
+    position: absolute;
+    top: 0;
+    border: 0;
+    z-index: -1;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: black;
+    width: 100%;
+}
+.centered{
+    margin: auto;
+}
+
+#navbar {
+    width: 100%;
+    top: 200px;
+    position: fixed;
+    text-align: center;
+}
+
+#logo {
+    width: 1074px;
+    height: auto;
+}
+
+#navbar ul {
+    width: 800;
+    list-style-type: none;
+}
+#navbar li {
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+    
+}
+#navbar li a {
+    font-family: "Arvo", serif;
+    list-style: none;
+    text-align: center;
+    display: block;
+    color: black;
+    border: solid 1px black;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+}
+#navbar li a:hover {
+    background-color: aliceblue;
+}
+
+
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 1000px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 110%;
+}
+
+img {
+    border-radius: 20px;
+}

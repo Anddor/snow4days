@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Snow4Days P2</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<header>
+    <h1>P2: Project Design</h1>
+
+    <h5>Andreas Dørum, Marius Aarsnes, Jakob Westermoen, Sebastian Olafsson, Thorben Dahl</h5>
+
+    <h5>October 12th 2015</h5>
+
+</header>
+
+<main>
+    <h2>Contents</h2>
+    <ol>
+        <li><a href="#2">Administrative details</a></li>
+        <li><a href="#3">Purpose, goals and audience</a></li>
+        <li><a href="#4">Navigation Structure</a></li>
+        <li><a href="#5">Page Layout and Appearance</a></li>
+        <li><a href="#6">Content</a></li>
+        <li><a href="#7">Minimum Requirements for JavaScript</a></li>
+        <li><a href="#8">Plan</a></li>
+    </ol>
+
+    <h2 id="2">2. Administrative details</h2>
+
+    <p>Client name: Snow4Days Inc.</p>
+
+    <p>Website name: Snow4Days</p>
+
+    <p>Contact person: Mike Hawke</p>
+
+
+    <h2 id="3">3. Purpose, goals, and audience</h2>
+
+    <p>The purpose is to increase revenue by getting more customers. The audience are experienced skiers and snowboard enthusiasts around the world. An informative website will help them make the right choice - picking Snow4Days as their destination.</p>
+
+
+    <h2 id="4">4. Navigation Structure</h2>
+
+    <p>Every site will be accessible from one another through the navigation bar. Everything will not be shown at once, as some of the locations ski4Days is offering will be under a drop-down menu in the navigation bar, so the user will have to hover their mouse over the “Locations” button to view the different offerings. THe footer will be accessible through the footer. </p>
+    <img src="images/nav_structure.png" alt="Illustration of how you can navigate through the site. Every site can be reached from everywhere.">
+
+    <h2 id="5">5. Page Layout and Appearance</h2>
+
+    <p>From the project requirements we have decided to have a clean and modern look, with emphasis on pictures. The page layout and appearance has been made with this in mind.</p>
+
+
+    <h3>Colors</h3>
+
+    <table>
+        <tr>
+            <td>Text color</td>
+
+            <td>black</td>
+
+        </tr>
+
+        <tr>
+            <td>Link color (hover)</td>
+
+            <td><span style="color:#349292">#349292</span>
+                (<span style="color:#94D7D7">#93D7D7</span>)</td>
+        </tr>
+        <tr>
+            <td>Visited link color (hover)</td>
+            <td><span style="color:#D49F36">#D49F36</span>
+                (<span style="color:#F4BF56">#F4BF56</span>)
+            </td>
+        </tr>
+        <tr>
+            <td>Background color</td>
+            <td style="background-color: #FAFEFE">#FAFEFE</td>
+        </tr>
+<!--
+        <tr>
+            <td>Header color (alternate)</td>
+            <td><span style="color: #93D7D7">#93D7D7</span>
+                (<span style="color: #CBFAFA">#CBFAFA</span>)</td>
+        </tr> -->
+        <tr>
+            <td>Background color for buttons, color for rulers</td>
+            <td style="background-color: #349292; color: white">#349292</td>
+        </tr>
+    </table>
+
+    <p>Similar pages, by example all the country pages, will have the same design. Images will have the same size and look. </p>
+
+    <h3>Fonts</h3>
+
+    <p>Open Sans for the main body of text. It looks nice and is available through Google Fonts and frequently used, which means that the user probably has the font cached. For headings we use the “arvo” font. The serifs means it contrasts with the body text. It is a part of google font as well.</p>
+
+    <h3>Links</h3>
+    <p>The logo will be a clickable link that will bring users back to the main page. The navbar will link to the different locations users can order package deals to.
+        Links will be <span style="text-decoration: underline">underlined</span>, because of convention.</p>
+
+    <h3>Logo</h3>
+    <p>On the main page the logo will be above the navbar, but on the other pages it will be a part of the navbar.</p>
+
+    <h3>Navbar</h3>
+    <p>At the front page, the navbar will be placed somewhat beneath the top of the page. At pages other than the front page, the navbar will be fixed at the top of the page. The navbar will indicate that an object is clickable, or show more options (locations), when the user is hovering over tabs in the navbar.</p>
+
+    <h3>Footer</h3>
+    <p>The footer will include a link to the site map of the page, and reference to the site creators (us).</p>
+
+    <h3>Image/video</h3>
+    <p>On the main page there will be a video in the background showing people skiing down mountains to entice users to make use of Snow4Days’ “awesome deals”.</p>
+
+    <h3>Scaling</h3>
+    <p>If project resources allow, the site will be made scalable for different screen sizes and devices. On bigger computer screens, the main body of the page will remain constant while pictures expand to fill the space.</p>
+
+
+    <h2 id="6">6. Content</h2>
+    <p>The website will consist of x separate pages as follows:</p>
+    <ol>
+        <li>
+            <h3>Homepage - index.html</h3>
+            <p>The homepage will be the startup site. This page will include a video of people skiing in one of our clients top locations, Telluride, to catch the user's attention. Furthermore the page will have an enlarged navbar compared to the other pages. Our clients logo will on this page be located on top of the navbar, and be larger than on the other sites.</p>
+            <p>The amount of text on this page will be held to a minimum to prompt the user to use the navbar.</p>
+            <p>We believe that this homepage will encourage the potential users explore the web page further and thereby purchase packages from our client. </p>
+            <img src="images/index.png" alt="Mock-up of the front page (splash)">
+
+        </li>
+
+        <li>
+            <h3>France - france.html</h3>
+            <p>The France page will contain some text with information about the country.</p>
+            <p>There will also be a short summary of the two locations our client offers, Chamonix and Val Thorens to inform the users about the possibilities in the regions.</p>
+            <p>The users will have the option to click on links that lead to the pages for both Charmonix and Val Thorens to read more about the locations and how to order.</p>
+            <p>The page will include picture(s) of France.</p>
+            <img src="images/france%20mock%20up.jpg" alt="mock-up of page">
+        </li>
+
+        <li>
+            <h3>Chamonix - chamonix.html</h3>
+            <p>This page will be one of two under-pages to france.html.</p>
+            <p>This page will have basic information like location with map, why go there, resort height, slope height, lifts, pistes and price. This way the user is further informed about the location. </p>
+            <p>There will also be a picture as the background and the text will be to the right, this will be the default layout for all the under-pages of all the countries. There may also be pictures floated to the left.</p>
+            <img src="images/Chamonix%20mock%20up.jpg" alt="mock-up of page">
+        </li>
+
+        <li>
+            <h3>Val Thorens - val_thorens.html</h3>
+            <p>This will be the second under-page to france-html and will inform the users about Val</p>
+            <p>Thorens.</p>
+            <p>This page will have basic information like location with map, why go there, resort height, slope height, lifts, pistes and price. There will also be pictures and free gifts for the needy people.</p>
+            <p>The structure and layout will be similar to the page about Charmonix, and all the other pages that is dedicated to a specific location. </p>
+            <img src="images/Val%20Thorens%20mock%20up.jpg" alt="mock-up of page">
+        </li>
+
+        <li>
+            <h3>Austria - austria.html</h3>
+            <p>The Austria page will contain some text with information about the country.</p>
+            <p>There will also be a short summary of the two locations our client offers, Bad Gastein and St Anton to inform the users about the possibilities in the regions.</p>
+            <p>The users will have the option to click on links that lead to the pages for both Bad Gastein and St Anton to read more about the locations and how to order.</p>
+            <p>The page will include picture(s) of Austria.</p>
+            <img src="images/austria%20mock%20up.jpg" alt="mock-up of page">
+        </li>
+        <li>
+            <h3>Bad Gastein - bad_gastein.html</h3>
+            <p>This page will be one of two under-pages to austria.html.</p>
+            <p>This page will have basic information like location with map, why go there, resort height, slope height, lifts, pistes and price. This way the user is further informed about the location. </p>
+            <p>There will also be a picture as the background and the text will be to the right, this will be the default layout for all the under-pages of all the countries. There may also be pictures floated to the left.</p>
+            <img src="images/Bad%20Gastein%20mock%20up.jpg" alt="mock-up of page">
+        </li>
+
+        <li>
+            <h3>St. Anton - st_anton.html</h3>
+            <p>This will be the second under-page to austria.html and will inform the users about St Anton.</p>
+            <p>This page will have basic information like location with map, why go there, resort height, slope height, lifts, pistes and price. There will also be pictures and free gifts for the needy people.</p>
+            <p>The structure and layout will be similar to the page about Bad Gastein, and all the other pages that is dedicated to a specific location. </p>
+            <img src="images/St%20Anton%20mock%20up.jpg" alt="mock-up of page">
+        </li>
+
+        <li>
+            <h3>Colorado - colorado.html</h3>
+            <p>The Colorado page will contain some text with information about the country.</p>
+            <p>There will also be a short summary of the two locations our client offers, Aspen and Telluride to inform the users about the possibilities in the regions.</p>
+            <p>The users will have the option to click on links that lead to the pages for both Aspen and  Telluride to read more about the locations and how to order.</p>
+            <p>The page will include picture(s) of Colorado.</p>
+            <img src="images/colorado%202nd%20mock%20up.jpg" alt="mock-up of page">
+        </li>
+
+        <li>
+            <h3>Aspen - aspen.html</h3>
+            <p>This page will be one of two under-pages to colorado.html.</p>
+            <p>This page will have basic information like location with map, why go there, resort height, slope height, lifts, pistes and price. This way the user is further informed about the location. </p>
+            <p>There will also be a picture as the background and the text will be to the right, this will be the default layout for all the under-pages of all the countries. There may also be pictures floated to the left.</p>
+            <img src="images/Aspen%20mock%20up.jpg" alt="mock-up of page">
+        </li>
+
+        <li>
+            <h3>Telluride - telluride.html</h3>
+            <p>This will be the second under-page to colorado.html and will inform the users about Telluride.</p>
+            <p>This page will have basic information like location with map, why go there, resort height, slope height, lifts, pistes and price. There will also be pictures and free gifts for the needy people.</p>
+            <p>The structure and layout will be similar to the page about Aspen, and all the other pages that is dedicated to a specific location. </p>
+            <img src="images/Telluride%20mock%20up.jpg" alt="mock-up of page">
+        </li>
+
+        <li>
+            <h3>Contact us - contact_us.html</h3>
+            <p>This page will include contact information which is required to be able to purchase packages from the website, as our client is not a fan of forms on websites.</p>
+            <p>The contact information displayed will be: Address, Phone numbers and and an Email-address.</p>
+            <img src="images/contact%20us%202nd%20mock%20up.jpg" alt="mock-up of page">
+        </li>
+
+        <li>
+            <h3>About - about_us.html</h3>
+            <p>The about page will provide information about who our client is and the services they provide.</p>
+            <p>There will be no pictures on this site, only text, as this is a site which is only meant to provide information and not a site our client want their users to spend the most amount of time on.</p>
+            <img src="images/about%20mock%20up.jpg" alt="mock-up of page">
+        </li>
+
+        <li>
+            <h3>Sitemap - sitemap.html</h3>
+            <p>This will show the complete structure of the website, making it easy to navigate the site if you’re having problems finding a specific html file. This satisfies the goal of having a sitemap.</p>
+            <p>We do not have a mock-up of this page at this point, but it will be similar to the Contact us and About pages.</p>
+        </li>
+    </ol>
+
+
+
+    <h2 id="7">7. Minimum Requirements for JavaScript</h2>
+
+    <h3>Drop down menu</h3>
+    <p>When hovering over a country in the navigation bar, locations in that country should be displayed underneath, allowing you jump directly to a specific location from any page. Only one such "drop down" should be displayed at any time. This will be implemented with JavaScript-code that hides the current drop-down and displays the correct one when "onMouseIn" activates, and hides the menu (or shows the one for the current page) once the mouse has left the menu area entirely.</p>
+
+    <h3>Animations</h3>
+    <p>When loading a page, some elements will fade in. Examples include background images that may take some time to load (so fade them in once they're ready). This can be implemented by changing the CSS opacity-property little by little.</p>
+
+    <h3>Limit video playback to desktop and tablet</h3>
+    <p>It would be bad if mobile users had to stream a video on the front page, eating up precious megabytes from their dataplan. Javascript could be used to hide/delete the Video element if the right conditions are met (or, alternatively only load the video if the right conditions are met).</p>
+
+    <h3>Collapsing</h3>
+    <p>In a FAQ-listing, individual questions will be listed, and the answer will be shown or hidden when clicking the corresponding question. This is different from the drop down menu since the pairs of questions and answers are independent from each other. JavaScript will take care of hiding or displaying the answer when clicking the question.</p>
+
+
+
+    <h2 id="8">8. Plan</h2>
+
+    <h3>Organizational scheme</h3>
+    <p>List of files and folders:</p>
+    <ul>
+        <li>index.html</li>
+        <li>locations/
+            <ul>
+                <li>france/
+                    <ul>
+                        <li>france.html</li>
+                        <li>charmonix.html</li>
+                        <li>val_thorens.html</li>
+                    </ul>
+                </li>
+                <li>austria/
+                    <ul>
+                        <li>austria.html</li>
+                        <li>bad_gastein.html</li>
+                        <li>st_anton.html</li>
+                    </ul>
+                </li>
+                <li>colorado/
+                    <ul>
+                        <li>colorado.html</li>
+                        <li>aspen.html</li>
+                        <li>telluride.html</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>about_us.html</li>
+        <li>contact_us.html</li>
+        <li>images/
+            <ul>
+                <li>colorado.jpg</li>
+            </ul>
+        </li>
+        <li>videos/
+            <ul>
+                <li>Main page video</li>
+            </ul>
+        </li>
+        <li>scripts/</li>
+        <li>styling.css</li>
+        <li>site.php</li>
+    </ul>
+
+    <h3>Work division and deadlines</h3>
+    <p> </p>
+    <p>We will work with iterations and follow up on each other. </p>
+    <table>
+        <tr>
+            <th>Filename</th>
+            <th>Description</th>
+            <th>Person responsible</th>
+            <th>Deadine</th>
+        </tr>
+
+        <tr>
+            <td>index.html</td>
+            <td>Home page. HTML5 Video on loop, little distractions on the page.</td>
+            <td>Andreas</td>
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>location_template.html</td>
+
+            <td>Template for location page.</td>
+
+            <td>Jakob</td>
+
+            <td>8.11.15</td>
+        </tr>
+        <tr>
+            <td>colorado.html</td>
+
+            <td>Locations page for Colorado. Links to aspen.html and telluride.html</td>
+
+            <td>Jakob</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>france.html</td>
+
+            <td>Location page for France. Links to charmonix.html and val_thorens.html</td>
+
+            <td>Jakob</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>austria.html</td>
+
+            <td>Locations page for Austria. Links to bad_gastien.html and st_anton.html</td>
+
+            <td>Jakob</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>travel_template.html</td>
+
+            <td>Template for all travel pages.</td>
+
+            <td>Marius</td>
+
+            <td>8.11.15</td>
+        </tr>
+        <tr>
+            <td>chamonix.html</td>
+
+            <td>Travel page for Chamonix.</td>
+
+            <td>Marius</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>val_thorens.html</td>
+
+            <td>Travel page for Val Thorens.</td>
+
+            <td>Marius</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>bad_gastein.html</td>
+
+            <td>Travel page for Bad Gastein.</td>
+
+            <td>Marius</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>st_anton.html</td>
+
+            <td>Travel page for St. Anton.</td>
+
+            <td>Marius</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>aspen.html</td>
+
+            <td>Travel page for Aspen.</td>
+
+            <td>Marius</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>telluride.html</td>
+
+            <td>Travel page for Telluride.</td>
+
+            <td>Marius</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>navbar.php</td>
+
+            <td>Navbar for every page, will stay constant.</td>
+
+            <td>Thorben Dahl</td>
+
+            <td>6.11.15</td>
+        </tr>
+        <tr>
+            <td>contact-us.html</td>
+
+            <td>Page for how to contact us, where questions will be directed to and where you can order trips from.</td>
+
+            <td>Sebastian</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>about.html</td>
+
+            <td>About our company, what we do, what we hope to achieve.</td>
+
+            <td>Sebastian</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>sitemap.html</td>
+
+            <td>Map of the site</td>
+
+            <td>Andreas</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>footer.html</td>
+
+            <td>Footer is also same for every page, so it stays constant and consistent.</td>
+
+            <td>Thorben Dahl</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>styling.css</td>
+
+            <td>Styling linked to  all pages. different look on different pages will be achieved through css selectors</td>
+
+            <td>Common</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>site.php</td>
+
+            <td>All PHP scripting needs go into this file. It will reuse HTML so that we won't duplicate the header and footer for every page.</td>
+
+            <td>Thorben Dahl</td>
+
+            <td>19.10.15</td>
+        </tr>
+        <tr>
+            <td>collapse.js</td>
+
+            <td>JavaScript for collapsing drop-down sections. Say a F.A.Q., you click on a question and the answer collapses. (we may compile all the javascript into a single file in the end, but just for simplifying development we're keeping them separate now).</td>
+
+            <td>Sebastian</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>animation.js</td>
+
+            <td>JavaScript for animations, such as fading contents.</td>
+
+            <td>Andreas </td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>video.js</td>
+
+            <td>JavaScript for ensuring only desktop and tablet users must deal with the video on the front page.</td>
+
+            <td>Marius</td>
+
+            <td>11.11.15</td>
+        </tr>
+        <tr>
+            <td>menu.js</td>
+
+            <td>Javascript for the navbar, dropdown.</td>
+
+            <td>Jakob</td>
+
+            <td>11.11.15</td>
+        </tr>
+    </table>
+</main>
+</body>
+</html>
