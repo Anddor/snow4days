@@ -103,11 +103,17 @@ nav ul.level3 li a {
     margin-right: auto
 }
 #mainVideo {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
     border: 0;
     z-index: -1;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 .centered{
     margin: auto;
