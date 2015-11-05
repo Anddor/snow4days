@@ -158,3 +158,40 @@ nav ul.level3 li a {
 #navbar li a:hover {
     background-color: aliceblue;
 }
+main#country{}
+main#country #countryDescription{
+    float: right;
+    width: 40%;
+    height: 100%;
+    background-color: lightblue;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+main#country #countryMap{
+    float: left;
+    width: 50%;
+    background-color: sandybrown;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+main#country #countryMap img{
+    display: block;
+    max-width:1024px;
+    max-height:767px;
+    width: 100%;
+    height: 100%;
+}
+main#country #countryLocation{
+    float: left;
+    width: 78%;
+    background-color: lightcoral;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+main#country #countryOrder{
+    float: right;
+    width: 20%;
+    background-color: yellowgreen;
+    margin-top: 10px;
+}
