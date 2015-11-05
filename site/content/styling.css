@@ -2,7 +2,6 @@ body {
     background-color: #FAFEFE;
     color: black;
     font-family: 'Open Sans', sans-serif;
-    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,45 +26,7 @@ a:visited:hover {
     color: #F4BF56;
 }
 
-/* images */
-a img {
-    border: none;
-}
-
-img {
-    max-width: 100%;
-}
-
 /* navbar */
-nav {
-    width: 100%;
-    display: block;
-    background-color: rgba(172, 216, 255, 0.5);
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding-left: 0;
-    position: relative;
-}
-
-nav ul.level1 {
-    margin: auto;
-}
-
-nav ul.level1 > li > a {
-    background-image: url("img/logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    color: rgba(0,0,0,0) !important; /* TODO: find a way to do this without !important */
-}
-
-nav ul.level1 > li > a.current {
-    display: none;
-}
-
 nav ul li {
     display: inline;
 }
@@ -79,21 +40,14 @@ nav:after, header:after {
 
 nav ul li a {
     display: inline-block;
-    padding: 0.5em 1em;
+    padding: 1em 2em;
     border: solid 1px black;
-    margin: 2px;
+    background-color: #349292;
 }
 
 nav ul li a:link, nav ul li a:visited,
 nav ul li a:link:hover, nav ul li a:visited:hover {
-    color: black;
-    text-decoration: none;
-    font-family: "Arvo", serif;
-    text-align: center;
-}
-
-nav ul li a:link:hover, nav ul li a:visited:hover {
-    background-color: aliceblue;
+    color: white;
 }
 
 nav ul li a.current {
@@ -101,7 +55,7 @@ nav ul li a.current {
 }
 
 nav ul.level2 {
-    display: inline-block;
+    display: inline;
     overflow: visible;
 }
 
@@ -111,16 +65,12 @@ nav ul.level2:after, nav ul.level1:after {
 }
 
 nav ul.level2 > li {
-}
-
-nav ul.level2 > li > a {
-    width: 80px;
+    float: left;
 }
 
 nav ul.level1 > li > a {
+    float: left;
 }
-
-
 
 nav ul li {
     position: relative;
@@ -128,20 +78,19 @@ nav ul li {
 
 nav ul.level3 {
     position: absolute;
+    padding-left: 0;
     top: 100%;
     left: 0px;
     z-index: 10;
     width: 150%;
-    margin-top: 8px;
 
     opacity: 0;
     display: none;
 }
-@media screen and (min-device-height: 800px) {
+
 nav ul.level2 > li:hover > ul.level3 {
     opacity: 1;
     display: block;
-}
 }
 
 nav ul.level3 li a {
@@ -150,16 +99,15 @@ nav ul.level3 li a {
 
 #videoWrapper {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto
 }
 #mainVideo {
     position: absolute;
     top: 0;
+    left: 0;
     border: 0;
     z-index: -1;
-    max-width: 100%;
-    overflow: hidden;
-    background-color: black;
-    width: 100%;
 }
 .centered{
     margin: auto;
@@ -175,6 +123,12 @@ nav ul.level3 li a {
 #logo {
     width: 1074px;
     height: auto;
+}
+#bar {
+    width: 100%;
+    height: 42px;
+    display: block;
+    background-color: rgba(172, 216, 255, 0.5)
 }
 
 #navbar ul {
@@ -202,3 +156,51 @@ nav ul.level3 li a {
 #navbar li a:hover {
     background-color: aliceblue;
 }
+/* start på css for locations */
+main#location section#locationDescription {
+    width: 40%;
+    margin-right: 6%;
+    margin-left:2%;
+    margin-top: 2%;
+    float: left;
+    background-color: rgba(190,190,190,0.2);
+    border-radius: 15px;
+    padding: 1%;
+    
+    
+}
+main#location section#locationDescription ul {
+    list-style: none;   
+}
+main#location section#locationDescription ul li {
+    margin-bottom: 0.5em;
+}
+main#location section#locationDescription h1#locationName {
+    letter-spacing: 1px;
+}
+main#location section#locationOrder {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 3px;
+    float:left;
+    width: 20%;
+    font-size: 10px;
+    background-color: rgba(190,190,190,0.2);
+    border-radius: 15px;
+    
+}
+main#location section#locationOrder section#locationOrderText {
+    width: 100%;
+}
+main#location section#map {
+    width: 50%;
+    float: right;
+}
+main#location section#map img {
+    display: block;
+    max-height: 900px;
+    max-width: 600px;
+    height: 80%;
+    width: 80%;
+}
+/* slutt på css for locations */
