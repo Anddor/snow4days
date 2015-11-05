@@ -3,7 +3,7 @@ body {
     color: black;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    background-image: url(photo-1434394673726-e8232a5903b4.jpeg);
+    background-image: url(background_image.jpeg);
     background-size: 100%;
 }
 
@@ -222,4 +222,11 @@ main {
 
 img {
     border-radius: 20px;
+}
+/* CSS for collapse.css, hiding the content. */
+.hide { 
+    display:none; 
+    border-radius: 5px;
+    padding-left: 4px;
+    border: solid 1px grey;
 }
