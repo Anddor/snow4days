@@ -86,8 +86,7 @@ EOL;
 <body>
 <form action="<?= basename(__FILE__) ?>" method="get">
     <h2>Get the HTML that will surround your HTML file</h2>
-    <p>Pick a target page, and you will get HTML which you can put in the file for previewing.
-    Just remember to remove it before commiting it to Git!</p>
+    <p>Pick a target page, and you will get HTML which you can put in the file for previewing.</p>
     <p>
         <label for="template">Which page?</label><br/>
         <select id="template" name="template" onchange="this.form.submit();">

@@ -28,7 +28,40 @@ a:visited:hover {
     color: #F4BF56;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* navbar */
+nav {
+    width: 100%;
+    display: block;
+    background-color: rgba(172, 216, 255, 0.5);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+}
+
+nav ul.level1 {
+    margin: auto;
+}
+
+nav ul.level1 > li > a {
+    background-image: url("img/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: rgba(0,0,0,0) !important; /* TODO: find a way to do this without !important */
+}
+
+nav ul.level1 > li > a.current {
+    display: none;
+}
+
 nav ul li {
     display: inline;
 }
@@ -42,14 +75,21 @@ nav:after, header:after {
 
 nav ul li a {
     display: inline-block;
-    padding: 1em 2em;
+    padding: 0.5em 1em;
     border: solid 1px black;
-    background-color: #349292;
+    margin: 2px;
 }
 
 nav ul li a:link, nav ul li a:visited,
 nav ul li a:link:hover, nav ul li a:visited:hover {
-    color: white;
+    color: black;
+    text-decoration: none;
+    font-family: "Arvo", serif;
+    text-align: center;
+}
+
+nav ul li a:link:hover, nav ul li a:visited:hover {
+    background-color: aliceblue;
 }
 
 nav ul li a.current {
@@ -57,7 +97,7 @@ nav ul li a.current {
 }
 
 nav ul.level2 {
-    display: inline;
+    display: inline-block;
     overflow: visible;
 }
 
@@ -67,12 +107,16 @@ nav ul.level2:after, nav ul.level1:after {
 }
 
 nav ul.level2 > li {
-    float: left;
+}
+
+nav ul.level2 > li > a {
+    width: 80px;
 }
 
 nav ul.level1 > li > a {
-    float: left;
 }
+
+
 
 nav ul li {
     position: relative;
@@ -80,19 +124,20 @@ nav ul li {
 
 nav ul.level3 {
     position: absolute;
-    padding-left: 0;
     top: 100%;
     left: 0px;
     z-index: 10;
     width: 150%;
+    margin-top: 8px;
 
     opacity: 0;
     display: none;
 }
-
-nav ul.level2 > li:hover > ul.level3 {
-    opacity: 1;
-    display: block;
+@media screen and (min-device-height: 800px) {
+    nav ul.level2 > li:hover > ul.level3 {
+        opacity: 1;
+        display: block;
+    }
 }
 
 nav ul.level3 li a {

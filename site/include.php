@@ -60,7 +60,7 @@ function default_layout(Page $page) {
     if (file_exists($page->file)) {
         $file_contents = file_get_contents($page->file);
         // Truncate everything before and after the <main> element
-        echo preg_replace("/^.*(<main.*<\\/main>).*\$/i", '$1', $file_contents, 1);
+        echo preg_replace("/^.*?(<main.*?<\\/main>).*\$/is", '$1', $file_contents, 1);
     } else {
         echo "<p>This page does not exist yet.</p>";
     }
