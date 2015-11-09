@@ -263,10 +263,6 @@ main#country #countryOrder{
     background-color: RGBA(170,170,170,0.2);
     margin-top: 10px;
 }
-
-img {
-    border-radius: 20px;
-}
 /* CSS for collapse.css, hiding the content. */
 .hide { 
     display:none; 
@@ -284,11 +280,9 @@ main#location section#locationDescription {
     background-color: rgba(255,255,255,0.5);
     border-radius: 15px;
     padding: 1%;
-    
-    
 }
 main#location section#locationDescription ul {
-    list-style: none;   
+    list-style: none;
 }
 main#location section#locationDescription ul li {
     margin-bottom: 0.5em;
@@ -299,10 +293,11 @@ main#location section#locationDescription h1#locationName {
 main#location section#locationOrder {
     margin-top: 2%;
     margin-bottom: 2%;
+    margin-right: 6%;
     padding: 3px;
-    float:left;
-    width: 25%;
-    font-size: 12px;
+    float:right;
+    width: 39.5%;
+    font-size: 18px;
     background-color: rgba(255,255,255,0.5);
     border-radius: 15px;
     
@@ -315,6 +310,8 @@ main#location section#map {
     float: right;
 }
 main#location section#map img {
+    float: right;
+    margin-right: 12%;
     display: block;
     max-height: 900px;
     max-width: 600px;
