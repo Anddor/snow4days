@@ -137,17 +137,17 @@ function generatePagesDictionary()
 {
 
     new Page('/', '/index.html', 'Front page',
-        new Page('/locations/france', '/locations/france/france.html', 'France',
+        new Page('/locations/france/about', '/locations/france/france.html', 'France',
             new Page('/locations/france/charmonix', '/locations/france/charmonix.html', 'Charmonix'),
             new Page('/locations/france/val_thorens', '/locations/france/val_thorens.html', 'Val Thorens')
         ),
 
-        new Page('/locations/austria', '/locations/austria/austria.html', 'Austria',
+        new Page('/locations/austria/about', '/locations/austria/austria.html', 'Austria',
             new Page('/locations/austria/bad_gastein', '/locations/austria/bad_gastein.html', 'Bad Gastein'),
             new Page('/locations/austria/st_anton', '/locations/austria/st_anton.html', 'St. Anton')
         ),
 
-        new Page('/locations/colorado', '/locations/colorado/colorado.html', 'Colorado',
+        new Page('/locations/colorado/about', '/locations/colorado/colorado.html', 'Colorado',
             new Page('/locations/colorado/aspen', '/locations/colorado/aspen.html', 'Aspen'),
             new Page('/locations/colorado/telluride', '/locations/colorado/telluride.html', 'Telluride')
         ),
