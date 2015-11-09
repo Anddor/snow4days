@@ -1,19 +1,6 @@
-(function (window, document, undefined) {
+window.addEventListener("load", function () {
     "use strict";
-    function init() {
-        function restart() {
-            var vid = document.getElementById("mainVideo");
-            vid.currentTime = 0;
-            vid.play();
-        }
-
-
-        var vid = document.getElementById("mainVideo");
-        vid.addEventListener('ended', restart, false);
-
-
+    if (window.innerWidth < 1300) {
+        document.getElementById("videoWrapper").removeChild(document.getElementById("mainVideo"));
     }
-    window.onload = init;
-
- 
-})(window, document, undefined);
+});
