@@ -226,7 +226,7 @@ main#location section#locationDescription {
     margin-left:2%;
     margin-top: 2%;
     float: left;
-    background-color: rgba(190,190,190,0.2);
+    background-color: rgba(255,255,255,0.5);
     border-radius: 15px;
     padding: 1%;
     
@@ -248,7 +248,7 @@ main#location section#locationOrder {
     float:left;
     width: 25%;
     font-size: 12px;
-    background-color: rgba(190,190,190,0.2);
+    background-color: rgba(255,255,255,0.5);
     border-radius: 15px;
     
 }
