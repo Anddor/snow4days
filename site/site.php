@@ -5,8 +5,7 @@
  * Date: 12.10.15
  * Time: 11:33
  */
-require_once('prepend.php');
-
+define('URL_ROOT', "http://{$_SERVER['HTTP_HOST']}" . dirname($_SERVER['SCRIPT_NAME']) . '/');
 require_once('include.php');
 
 
