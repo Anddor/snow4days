@@ -5,7 +5,6 @@
  * look when accessed through the server.
  *
  */
-require_once('prepend.php');
 require_once('include.php');
 
 generatePagesDictionary();
