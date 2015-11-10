@@ -227,13 +227,12 @@ main#contact {
     font-size: 110%;
 }
 
-
 main#country p{margin: 10px;}
 main#country #countryDescription{
     float: right;
     width: 40%;
     height: 100%;
-    background-color: RGBA(170,170,170,0.2);
+    background-color: rgba(255,255,255,0.5);
     margin-top: 10px;
     padding-left: 10px;
     padding-top: 10px;
@@ -272,12 +271,17 @@ main#country #countryOrder{
 }
 
 /* start på css for locations */
+main#location {
+    margin-top: 10px;
+}
 main#location section#locationDescription {
-    width: 40%;
+    width: 30%;
     margin-left:10%;
+    padding: 1%;
     float: left;
     background-color: rgba(255,255,255,0.5);
     border-radius: 15px;
+    
 }
 main#location section#locationDescription ul {
     list-style: none;
@@ -289,8 +293,9 @@ main#location section#locationDescription h1#locationName {
     letter-spacing: 1px;
 }
 main#location section#locationOrder {
-    width: 40%;
+    width: 30%;
     margin-right: 10%;
+    padding: 1%;
     float:right;
     background-color: rgba(255,255,255,0.5);
     border-radius: 15px;
