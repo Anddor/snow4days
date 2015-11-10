@@ -270,6 +270,7 @@ main#country #countryOrder{
     padding-left: 4px;
     border: solid 1px grey;
 }
+
 /* start på css for locations */
 main#location section#locationDescription {
     width: 40%;
