@@ -5,8 +5,7 @@
  * Date: 12.10.15
  * Time: 11:33
  */
-require_once('prepend.php');
-
+define('URL_ROOT', "http://{$_SERVER['HTTP_HOST']}" . dirname($_SERVER['SCRIPT_NAME']) . '/');
 require_once('include.php');
 
 
@@ -22,14 +21,13 @@ function main($server) {
         }
         $resource = parseUrl($server['REQUEST_URI']);
         // Assume it is a file if it has a file extension
-        $fileExtension = explode(".", $resource);
-        if (count($fileExtension) > 1) {
-            // It is a file
-            $fileExtension = $fileExtension[1];
+        if (strpos($resource, ".") !== false) {
+            // It is a file, don't output using PHP
+            header("HTTP/1.1 307 Temporary Redirect");
             $filepath = CONTENT_DIR . $resource;
             if (file_exists($filepath)) {
-                sendMimeType($fileExtension);
-                readfile($filepath);
+                header("Location: " . URL_ROOT . "content" . $resource);
+                die();
             } else {
                 header("HTTP/1.1 404 File Not Found");
                 die();

@@ -1,5 +1,4 @@
 body {
-    background-color: #FAFEFE;
     color: black;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -29,26 +28,25 @@ a:visited:hover {
     color: #F4BF56;
 }
 
-/* images */
-a img {
-    border: none;
-}
-
 img {
     max-width: 100%;
 }
 
 /* navbar */
 nav {
+    margin: 0 auto;
     width: 100%;
     display: block;
-    background-color: rgba(172, 216, 255, 0.5);
+    background-color: rgba(172, 216, 255, 0.7);
     text-align: center;
+    font-weight: bold;
 }
 
 nav ul {
     list-style: none;
     padding-left: 0;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
     position: relative;
 }
 
@@ -72,18 +70,23 @@ nav ul li {
     display: inline;
 }
 
-nav:after, header:after {
+nav:after, header:after, .clearfix:after {
     content: " ";
     display: block;
     height: 0;
     clear: both;
 }
 
+.clear {
+    width: 100%;
+    clear: both;
+}
+
 nav ul li a {
     display: inline-block;
     padding: 0.5em 1em;
-    border: solid 1px black;
     margin: 2px;
+    border-radius: 15px;
 }
 
 nav ul li a:link, nav ul li a:visited,
@@ -122,8 +125,6 @@ nav ul.level2 > li > a {
 nav ul.level1 > li > a {
 }
 
-
-
 nav ul li {
     position: relative;
 }
@@ -140,10 +141,10 @@ nav ul.level3 {
     display: none;
 }
 @media screen and (min-device-height: 800px) {
-nav ul.level2 > li:hover > ul.level3 {
-    opacity: 1;
-    display: block;
-}
+    nav ul.level2 > li:hover > ul.level3 {
+        opacity: 1;
+        display: block;
+    }
 }
 
 nav ul.level3 li a {
@@ -152,16 +153,20 @@ nav ul.level3 li a {
 
 #videoWrapper {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto
 }
 #mainVideo {
-    position: absolute;
-    top: 0;
-    border: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
     z-index: -1;
-    max-width: 100%;
-    overflow: hidden;
-    background-color: black;
-    width: 100%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 .centered{
     margin: auto;
@@ -177,6 +182,12 @@ nav ul.level3 li a {
 #logo {
     width: 1074px;
     height: auto;
+}
+#bar {
+    width: 100%;
+    height: 42px;
+    display: block;
+    background-color: rgba(172, 216, 255, 0.5);
 }
 
 #navbar ul {
@@ -205,24 +216,103 @@ nav ul.level3 li a {
     background-color: aliceblue;
 }
 
-
-
-main {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    width: 1000px;
+main#country p{margin: 10px;}
+main#country #countryDescription{
+    float: right;
+    width: 40%;
+    height: 100%;
     background-color: rgba(255,255,255,0.5);
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
-    color: black;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+main#country #countryMap{
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+main#country #countryMap img{
+    display: block;
+    max-width:1024px;
+    max-height:767px;
+    width: 100%;
+    height: 100%;
+}
+main#country .countryLocation{
+    width: 78%;
+    background-color: rgba(255,255,255,0.5);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+main#country #countryOrder{
+    float: right;
+    width: 20%;
+    background-color: rgba(255,255,255,0.5);
+    margin-top: 10px;
+}
+/* start på css for locations */
+
+main#location {
+    margin-top: 10px;
+}
+main#location section#locationDescription {
+    width: 30%;
+    margin-left:15%;
+    padding: 1%;
+    float: left;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 15px;
+    
+}
+main#location section#locationDescription ul {
+    list-style: none;
+}
+main#location section#locationDescription ul li {
+    margin-bottom: 0.5em;
+}
+main#location section#locationDescription h1#locationName {
+    letter-spacing: 1px;
+}
+main#location section#locationOrder {
+    width: 30%;
+    margin-right: 15%;
+    padding: 1%;
+    float:right;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 15px;
+    
+}
+main#location section#locationOrder section#locationOrderText {
+    width: 100%;
+}
+/* slutt på css for locations */
+
+
+/* Start på css for contact us*/
+
+main#contact {
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;				
+    background-color: rgba(255,255,255,0.5);		
+    border-radius: 10px;		
+    padding: 10px;		
+    margin-bottom: 20px;		
+    color: black;		
     font-size: 110%;
 }
-
-img {
-    border-radius: 20px;
+main#contact section#contactInfo {
+    width: 40%;
+    float: left;
 }
+main#contact section#FAQ{
+    width: 40%;
+    float: right;
+}
+
 /* CSS for collapse.css, hiding the content. */
 .hide { 
     display:none; 
@@ -230,3 +320,4 @@ img {
     padding-left: 4px;
     border: solid 1px grey;
 }
+/* slutt på css for contact us*/
