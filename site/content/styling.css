@@ -34,15 +34,19 @@ img {
 
 /* navbar */
 nav {
+    margin: 0 auto;
     width: 100%;
     display: block;
-    background-color: rgba(172, 216, 255, 0.5);
+    background-color: rgba(172, 216, 255, 0.7);
     text-align: center;
+    font-weight: bold;
 }
 
 nav ul {
     list-style: none;
     padding-left: 0;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
     position: relative;
 }
 
@@ -81,8 +85,8 @@ nav:after, header:after, .clearfix:after {
 nav ul li a {
     display: inline-block;
     padding: 0.5em 1em;
-    border: solid 1px black;
     margin: 2px;
+    border-radius: 15px;
 }
 
 nav ul li a:link, nav ul li a:visited,
@@ -120,8 +124,6 @@ nav ul.level2 > li > a {
 
 nav ul.level1 > li > a {
 }
-
-
 
 nav ul li {
     position: relative;
@@ -185,7 +187,7 @@ nav ul.level3 li a {
     width: 100%;
     height: 42px;
     display: block;
-    background-color: rgba(172, 216, 255, 0.5)
+    background-color: rgba(172, 216, 255, 0.5);
 }
 
 #navbar ul {
@@ -214,26 +216,12 @@ nav ul.level3 li a {
     background-color: aliceblue;
 }
 
-main#contact {
-    margin-left: auto;		
-    margin-right: auto;		
-    margin-top: 20px;		
-    width: 1000px;		
-    background-color: rgba(255,255,255,0.5);		
-    border-radius: 10px;		
-    padding: 10px;		
-    margin-bottom: 20px;		
-    color: black;		
-    font-size: 110%;
-}
-
-
 main#country p{margin: 10px;}
 main#country #countryDescription{
     float: right;
     width: 40%;
     height: 100%;
-    background-color: RGBA(170,170,170,0.2);
+    background-color: rgba(255,255,255,0.5);
     margin-top: 10px;
     padding-left: 10px;
     padding-top: 10px;
@@ -253,42 +241,32 @@ main#country #countryMap img{
 }
 main#country .countryLocation{
     width: 78%;
-    background-color: RGBA(170,170,170,0.2);
+    background-color: rgba(255,255,255,0.5);
     margin-bottom: 10px;
     margin-top: 10px;
 }
 main#country #countryOrder{
     float: right;
     width: 20%;
-    background-color: RGBA(170,170,170,0.2);
+    background-color: rgba(255,255,255,0.5);
     margin-top: 10px;
 }
-
-img {
-    border-radius: 20px;
-}
-/* CSS for collapse.css, hiding the content. */
-.hide { 
-    display:none; 
-    border-radius: 5px;
-    padding-left: 4px;
-    border: solid 1px grey;
-}
 /* start på css for locations */
+
+main#location {
+    margin-top: 10px;
+}
 main#location section#locationDescription {
-    width: 40%;
-    margin-right: 6%;
-    margin-left:2%;
-    margin-top: 2%;
+    width: 30%;
+    margin-left:15%;
+    padding: 1%;
     float: left;
     background-color: rgba(255,255,255,0.5);
     border-radius: 15px;
-    padding: 1%;
-    
     
 }
 main#location section#locationDescription ul {
-    list-style: none;   
+    list-style: none;
 }
 main#location section#locationDescription ul li {
     margin-bottom: 0.5em;
@@ -297,12 +275,10 @@ main#location section#locationDescription h1#locationName {
     letter-spacing: 1px;
 }
 main#location section#locationOrder {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    padding: 3px;
-    float:left;
-    width: 25%;
-    font-size: 12px;
+    width: 30%;
+    margin-right: 15%;
+    padding: 1%;
+    float:right;
     background-color: rgba(255,255,255,0.5);
     border-radius: 15px;
     
@@ -310,15 +286,38 @@ main#location section#locationOrder {
 main#location section#locationOrder section#locationOrderText {
     width: 100%;
 }
-main#location section#map {
-    width: 50%;
+/* slutt på css for locations */
+
+
+/* Start på css for contact us*/
+
+main#contact {
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;				
+    background-color: rgba(255,255,255,0.5);		
+    border-radius: 10px;		
+    padding: 10px;		
+    margin-bottom: 20px;		
+    color: black;		
+    font-size: 110%;
+}
+main#contact section#contactInfo {
+    width: 40%;
+    float: left;
+}
+main#contact section#FAQ{
+    width: 40%;
     float: right;
 }
-main#location section#map img {
-    display: block;
-    max-height: 900px;
-    max-width: 600px;
-    height: 80%;
-    width: 80%;
+
+/* CSS for collapse.css, hiding the content. */
+.hide { 
+    display:none; 
+    border-radius: 5px;
+    padding-left: 4px;
+    border: solid 1px grey;
 }
-/* slutt på css for locations */
+/* slutt på css for contact us*/
