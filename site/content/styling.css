@@ -132,13 +132,18 @@ nav ul li {
 nav ul.level3 {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -25%;
     z-index: 10;
     width: 150%;
-    margin-top: 8px;
-    /* hide by default */
+    margin-top: 0px;
+/* hide by default */
     opacity: 0;
     display: none;
+}
+nav ul.level3 a {
+    margin-top: 8px;
+    background-color: rgba(82,212,255,1);
+    box-shadow: 0px 2px 2px #888888;
 }
 @media screen and (min-device-height: 800px) {
     nav ul.level2 > li:hover > ul.level3 {
