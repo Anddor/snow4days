@@ -55,13 +55,14 @@ nav ul.level1 {
 }
 
 nav ul.level1 > li > a {
-    background-image: url("img/logo.png");
+    background-image: url("img/logo_white.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     color: rgba(0,0,0,0) !important; /* TODO: find a way to do this without !important */
 }
 
+/* Hide the link to the front page if we're on the front page */
 nav ul.level1 > li > a.current {
     display: none;
 }
@@ -84,7 +85,7 @@ nav:after, header:after, .clearfix:after {
 
 nav ul li a {
     display: inline-block;
-    padding: 0.5em 1em;
+    padding: 0.75em 1.5em;
     margin: 2px;
     border-radius: 15px;
 }
@@ -102,7 +103,7 @@ nav ul li a:link:hover, nav ul li a:visited:hover {
 }
 
 nav ul li a.current {
-    font-weight: bold;
+    font-weight: normal;
 }
 
 nav ul.level2 {
@@ -119,7 +120,7 @@ nav ul.level2 > li {
 }
 
 nav ul.level2 > li > a {
-    width: 80px;
+    width: 90px;
 }
 
 nav ul.level1 > li > a {
@@ -131,18 +132,22 @@ nav ul li {
 
 nav ul.level3 {
     position: absolute;
-    top: 100%;
+    top: 140%;
     left: -25%;
     z-index: 10;
     width: 150%;
     margin-top: 0px;
+/* hide by default */
     opacity: 0;
     display: none;
 }
-nav ul.level3 a {
-    margin-top: 8px;
-    background-color: rgba(82,212,255,1);
+nav ul.level1 a{
     box-shadow: 0px 2px 2px #888888;
+}
+nav ul.level3 a {
+    margin-top: 4px;
+    background-color: rgba(82,212,255,1);
+
 }
 @media screen and (min-device-height: 800px) {
     nav ul.level2 > li:hover > ul.level3 {
@@ -193,11 +198,7 @@ nav ul.level3 li a {
     display: block;
     background-color: rgba(172, 216, 255, 0.5);
 }
-
-#navbar ul {
-    width: 800;
-    list-style-type: none;
-}
+/*
 #navbar li {
     display: inline-block;
     padding-left: 0;
@@ -216,19 +217,40 @@ nav ul.level3 li a {
     height: 40px;
     line-height: 40px;
 }
+
+#navbar ul {
+    width: 800;
+    list-style-type: none;
+}
 #navbar li a:hover {
     background-color: aliceblue;
+<<<<<<< HEAD
+}*/
+}
+main#country {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 1000px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 110%;
 }
 
 main#country p{margin: 10px;}
+
 main#country #countryDescription{
     float: right;
-    width: 40%;
+    width: 45%;
     height: 100%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: RGBA(190,190,190,0.4);
     margin-top: 10px;
     padding-left: 10px;
     padding-top: 10px;
+    border-radius: 10px;
 }
 main#country #countryMap{
     float: left;
@@ -242,18 +264,21 @@ main#country #countryMap img{
     max-height:767px;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 main#country .countryLocation{
     width: 78%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: RGBA(190,190,190,0.4);
     margin-bottom: 10px;
     margin-top: 10px;
+    border-radius: 10px;
 }
 main#country #countryOrder{
     float: right;
     width: 20%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: RGBA(190,190,190,0.4);
     margin-top: 10px;
+    border-radius: 10px;
 }
 /* start på css for locations */
 
