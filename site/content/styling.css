@@ -199,10 +199,6 @@ nav ul.level3 li a {
     background-color: rgba(172, 216, 255, 0.5);
 }
 /*
-#navbar ul {
-    width: 800;
-    list-style-type: none;
-}
 #navbar li {
     display: inline-block;
     padding-left: 0;
@@ -221,19 +217,40 @@ nav ul.level3 li a {
     height: 40px;
     line-height: 40px;
 }
+
+#navbar ul {
+    width: 800;
+    list-style-type: none;
+}
 #navbar li a:hover {
     background-color: aliceblue;
+<<<<<<< HEAD
 }*/
+}
+main#country {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 1000px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 110%;
+}
 
 main#country p{margin: 10px;}
+
 main#country #countryDescription{
     float: right;
-    width: 40%;
+    width: 45%;
     height: 100%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: RGBA(190,190,190,0.4);
     margin-top: 10px;
     padding-left: 10px;
     padding-top: 10px;
+    border-radius: 10px;
 }
 main#country #countryMap{
     float: left;
@@ -247,18 +264,21 @@ main#country #countryMap img{
     max-height:767px;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 main#country .countryLocation{
     width: 78%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: RGBA(190,190,190,0.4);
     margin-bottom: 10px;
     margin-top: 10px;
+    border-radius: 10px;
 }
 main#country #countryOrder{
     float: right;
     width: 20%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: RGBA(190,190,190,0.4);
     margin-top: 10px;
+    border-radius: 10px;
 }
 /* start på css for locations */
 
@@ -352,13 +372,24 @@ img#family{
     margin-left: auto;
     margin-right: auto;
     display: table; 
+    border-radius: 10px;
 
+
+}
+figure{
+    float: right;
+    margin: 0 50px 10px 150px;
+    
+    
 }
 
 figcaption#family{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    color: #000080;
+    color: black;
+    font-weight: bold;
+    margin-top: 15px;
+    
 }
 /* slutt på css for contact us*/
