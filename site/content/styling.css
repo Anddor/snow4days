@@ -347,13 +347,24 @@ img#family{
     margin-left: auto;
     margin-right: auto;
     display: table; 
+    border-radius: 10px;
 
+
+}
+figure{
+    float: right;
+    margin: 0 50px 10px 150px;
+    
+    
 }
 
 figcaption#family{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    color: #000080;
+    color: black;
+    font-weight: bold;
+    margin-top: 15px;
+    
 }
 /* slutt på css for contact us*/
