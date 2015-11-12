@@ -102,7 +102,7 @@ EOL;
 
 function print_navbar(Page $currentPage, $pages) {
 ?>
-    <nav>
+    <nav id="navbar">
         <ul class="level1">
             <?php
             if ($pages['/'] instanceof Page) {
