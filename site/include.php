@@ -153,7 +153,8 @@ function generatePagesDictionary()
         ),
 
         new Page('/about', '/about_us.html', 'About us'),
-        new Page('/contact', '/contact_us.html', 'Contact')
+        new Page('/contact', '/contact_us.html', 'Contact'),
+        new Page('/sitemap', '/sitemap.html', 'Sitemap')
     );
 }
 
