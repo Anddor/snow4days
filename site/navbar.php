@@ -49,10 +49,12 @@
     function print_list_entry(Page $currentPage, Page $page, $level) {
         $current = ($currentPage == $page) ? ' class="current"' : '';
         $url = absolute_to_relative($currentPage->url, $page->url);
+        $underpagesExists = count($page->underpages);
+        $name = $underpagesExists ? $page->name . " ▾" : $page->name;
         echo <<<EOL
-<li><a href="$url" title="$page->description"$current>$page->name</a>
+<li><a href="$url" title="$page->description"$current>$name</a>
 EOL;
-        if (count($page->underpages)) {
+        if ($underpagesExists) {
             $new_level = $level + 1;
             echo "<ul class='level$new_level'>";
             foreach ($page->underpages as $underpage) {
@@ -60,10 +62,11 @@ EOL;
             }
             echo "</ul>";
         }
-        echo "</li>\n";
+        echo "</li>";
     }
 
-function print_navbar(Page $currentPage, $pages) {
+    function print_html_start(Page $currentPage) {
+
 
 ?><!DOCTYPE html>
 <html>
@@ -71,11 +74,15 @@ function print_navbar(Page $currentPage, $pages) {
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $currentPage->name ?> - Snow4Days</title>
-    <link rel="stylesheet" href="<?= absolute_to_relative($currentPage->url, "/styling.css"); ?>"/>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet"
+          href="<?= absolute_to_relative($currentPage->url, "/styling.css"); ?>"/>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700'
+          rel='stylesheet' type='text/css'>
     <!-- insert meta-data here -->
-<?php // include the relevant javascript files
+    <?php // include the relevant javascript files
     $javascriptFiles = array(
         JS_COLLAPSE => "collapse.js",
         JS_ANIMATION => "animation.js",
@@ -90,7 +97,11 @@ function print_navbar(Page $currentPage, $pages) {
     ?>
 </head>
 <body>
-<header>
+<?php
+}
+
+function print_navbar(Page $currentPage, $pages) {
+?>
     <nav id="navbar">
         <ul class="level1">
             <?php
@@ -100,7 +111,6 @@ function print_navbar(Page $currentPage, $pages) {
             ?>
         </ul>
     </nav>
-</header>
 
 <?php
 }
