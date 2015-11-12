@@ -1,5 +1,7 @@
 <?php
 
+define('URL_ROOT', "http://{$_SERVER['HTTP_HOST']}" . dirname($_SERVER['SCRIPT_NAME']) . '/');
+
 // Configuration
 define('DEFAULT_LAYOUT', 'default_layout');
 define('SPLASH', 'splash_layout');
