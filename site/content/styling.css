@@ -55,13 +55,14 @@ nav ul.level1 {
 }
 
 nav ul.level1 > li > a {
-    background-image: url("img/logo.png");
+    background-image: url("img/logo_white.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     color: rgba(0,0,0,0) !important; /* TODO: find a way to do this without !important */
 }
 
+/* Hide the link to the front page if we're on the front page */
 nav ul.level1 > li > a.current {
     display: none;
 }
@@ -102,7 +103,7 @@ nav ul li a:link:hover, nav ul li a:visited:hover {
 }
 
 nav ul li a.current {
-    font-weight: bold;
+    font-weight: normal;
 }
 
 nav ul.level2 {
@@ -119,7 +120,7 @@ nav ul.level2 > li {
 }
 
 nav ul.level2 > li > a {
-    width: 80px;
+    width: 90px;
 }
 
 nav ul.level1 > li > a {
@@ -131,7 +132,7 @@ nav ul li {
 
 nav ul.level3 {
     position: absolute;
-    top: 100%;
+    top: 140%;
     left: -25%;
     z-index: 10;
     width: 150%;
@@ -140,10 +141,13 @@ nav ul.level3 {
     opacity: 0;
     display: none;
 }
-nav ul.level3 a {
-    margin-top: 8px;
-    background-color: rgba(82,212,255,1);
+nav ul.level1 a{
     box-shadow: 0px 2px 2px #888888;
+}
+nav ul.level3 a {
+    margin-top: 4px;
+    background-color: rgba(82,212,255,1);
+
 }
 @media screen and (min-device-height: 800px) {
     nav ul.level2 > li:hover > ul.level3 {
