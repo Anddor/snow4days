@@ -63,7 +63,8 @@ EOL;
         echo "</li>";
     }
 
-function print_navbar(Page $currentPage, $pages) {
+    function print_html_start(Page $currentPage) {
+
 
 ?><!DOCTYPE html>
 <html>
@@ -71,11 +72,15 @@ function print_navbar(Page $currentPage, $pages) {
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $currentPage->name ?> - Snow4Days</title>
-    <link rel="stylesheet" href="<?= absolute_to_relative($currentPage->url, "/styling.css"); ?>"/>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet"
+          href="<?= absolute_to_relative($currentPage->url, "/styling.css"); ?>"/>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700'
+          rel='stylesheet' type='text/css'>
     <!-- insert meta-data here -->
-<?php // include the relevant javascript files
+    <?php // include the relevant javascript files
     $javascriptFiles = array(
         JS_COLLAPSE => "collapse.js",
         JS_ANIMATION => "animation.js",
@@ -90,7 +95,11 @@ function print_navbar(Page $currentPage, $pages) {
     ?>
 </head>
 <body>
-<header>
+<?php
+}
+
+function print_navbar(Page $currentPage, $pages) {
+?>
     <nav>
         <ul class="level1">
             <?php
@@ -100,7 +109,6 @@ function print_navbar(Page $currentPage, $pages) {
             ?>
         </ul>
     </nav>
-</header>
 
 <?php
 }
