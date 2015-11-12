@@ -54,9 +54,17 @@ class Page {
 
 function default_layout(Page $page) {
 
-
     require('navbar.php');
+    print_html_start($page);
+    echo '<header>';
     print_navbar($page, Page::$webpages);
+    echo '</header>';
+    print_page_content($page);
+    require('footer.html');
+}
+
+
+function print_page_content(Page $page) {
     if (file_exists($page->file)) {
         $file_contents = file_get_contents($page->file);
         // Truncate everything before and after the <main> element
@@ -64,6 +72,22 @@ function default_layout(Page $page) {
     } else {
         echo "<p>This page does not exist yet.</p>";
     }
+}
+
+
+function index_layout(Page $page) {
+    require('navbar.php');
+    print_html_start($page);
+    // Get the navbar HTML
+    ob_start();
+    print_navbar($page, Page::$webpages);
+    $navbarHtml = ob_get_clean();
+    // Get the page HTML
+    ob_start();
+    print_page_content($page);
+    $pageHtml = ob_get_clean();
+    // Do the replacing and print it out
+    echo str_replace('{MENU HERE}', $navbarHtml, $pageHtml);
     require('footer.html');
 }
 
@@ -130,7 +154,7 @@ function parseUrl($url) {
     if ($fullPath === null) {
         throw new InvalidArgumentException();
     }
-    return $fullPath;
+    return str_replace('.html', '', $fullPath);
 }
 
 function generatePagesDictionary()
@@ -156,6 +180,7 @@ function generatePagesDictionary()
         new Page('/contact', '/contact_us.html', 'Contact'),
         new Page('/sitemap', '/sitemap.html', 'Sitemap')
     );
+    Page::$webpages['/']->setTemplate('index_layout');
 }
 
 function printErrorPage() {
