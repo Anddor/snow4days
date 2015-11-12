@@ -28,7 +28,44 @@ a:visited:hover {
     color: #F4BF56;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* navbar */
+nav {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    background-color: rgba(172, 216, 255, 0.7);
+    text-align: center;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    position: relative;
+}
+
+nav ul.level1 {
+    margin: auto;
+}
+
+nav ul.level1 > li > a {
+    background-image: url("img/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: rgba(0,0,0,0) !important; /* TODO: find a way to do this without !important */
+}
+
+nav ul.level1 > li > a.current {
+    display: none;
+}
+
 nav ul li {
     display: inline;
 }
@@ -47,14 +84,21 @@ nav:after, header:after, .clearfix:after {
 
 nav ul li a {
     display: inline-block;
-    padding: 1em 2em;
-    border: solid 1px black;
-    background-color: #349292;
+    padding: 0.5em 1em;
+    margin: 2px;
+    border-radius: 15px;
 }
 
 nav ul li a:link, nav ul li a:visited,
 nav ul li a:link:hover, nav ul li a:visited:hover {
-    color: white;
+    color: black;
+    text-decoration: none;
+    font-family: "Arvo", serif;
+    text-align: center;
+}
+
+nav ul li a:link:hover, nav ul li a:visited:hover {
+    background-color: aliceblue;
 }
 
 nav ul li a.current {
@@ -62,7 +106,7 @@ nav ul li a.current {
 }
 
 nav ul.level2 {
-    display: inline;
+    display: inline-block;
     overflow: visible;
 }
 
@@ -72,11 +116,13 @@ nav ul.level2:after, nav ul.level1:after {
 }
 
 nav ul.level2 > li {
-    float: left;
+}
+
+nav ul.level2 > li > a {
+    width: 80px;
 }
 
 nav ul.level1 > li > a {
-    float: left;
 }
 
 nav ul li {
@@ -85,19 +131,24 @@ nav ul li {
 
 nav ul.level3 {
     position: absolute;
-    padding-left: 0;
     top: 100%;
-    left: 0px;
+    left: -25%;
     z-index: 10;
     width: 150%;
-
+    margin-top: 0px;
     opacity: 0;
     display: none;
 }
-
-nav ul.level2 > li:hover > ul.level3 {
-    opacity: 1;
-    display: block;
+nav ul.level3 a {
+    margin-top: 8px;
+    background-color: rgba(82,212,255,1);
+    box-shadow: 0px 2px 2px #888888;
+}
+@media screen and (min-device-height: 800px) {
+    nav ul.level2 > li:hover > ul.level3 {
+        opacity: 1;
+        display: block;
+    }
 }
 
 nav ul.level3 li a {
@@ -110,11 +161,16 @@ nav ul.level3 li a {
     margin-right: auto
 }
 #mainVideo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
     z-index: -1;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 .centered{
     margin: auto;
@@ -135,7 +191,7 @@ nav ul.level3 li a {
     width: 100%;
     height: 42px;
     display: block;
-    background-color: rgba(172, 216, 255, 0.5)
+    background-color: rgba(172, 216, 255, 0.5);
 }
 
 #navbar ul {
@@ -175,6 +231,7 @@ main#country {
     color: black;
     font-size: 110%;
 }
+
 main#country p{margin: 10px;}
 
 main#country #countryDescription{
@@ -215,32 +272,22 @@ main#country #countryOrder{
     margin-top: 10px;
     border-radius: 10px;
 }
-
-img {
-    border-radius: 20px;
-}
-/* CSS for collapse.css, hiding the content. */
-.hide { 
-    display:none; 
-    border-radius: 5px;
-    padding-left: 4px;
-    border: solid 1px grey;
-}
 /* start på css for locations */
+
+main#location {
+    margin-top: 10px;
+}
 main#location section#locationDescription {
-    width: 40%;
-    margin-right: 6%;
-    margin-left:2%;
-    margin-top: 2%;
-    float: left;
-    background-color: rgba(190,190,190,0.2);
-    border-radius: 15px;
+    width: 30%;
+    margin-left:15%;
     padding: 1%;
-    
+    float: left;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 15px;
     
 }
 main#location section#locationDescription ul {
-    list-style: none;   
+    list-style: none;
 }
 main#location section#locationDescription ul li {
     margin-bottom: 0.5em;
@@ -249,28 +296,92 @@ main#location section#locationDescription h1#locationName {
     letter-spacing: 1px;
 }
 main#location section#locationOrder {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    padding: 3px;
-    float:left;
-    width: 20%;
-    font-size: 10px;
-    background-color: rgba(190,190,190,0.2);
+    width: 30%;
+    margin-right: 15%;
+    padding: 1%;
+    float:right;
+    background-color: rgba(255,255,255,0.5);
     border-radius: 15px;
     
 }
 main#location section#locationOrder section#locationOrderText {
     width: 100%;
 }
-main#location section#map {
-    width: 50%;
+/* slutt på css for locations */
+
+
+/* Start på css for contact us*/
+
+main#contact {
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;				
+    background-color: rgba(255,255,255,0.5);		
+    border-radius: 10px;		
+    padding: 10px;		
+    margin-bottom: 20px;		
+    color: black;		
+    font-size: 110%;
+}
+main#contact section#contactInfo {
+    width: 40%;
+    float: left;
+}
+main#contact section#FAQ{
+    width: 40%;
     float: right;
 }
-main#location section#map img {
-    display: block;
-    max-height: 900px;
-    max-width: 600px;
-    height: 80%;
-    width: 80%;
+
+/* CSS for collapse.css, hiding the content. */
+.hide { 
+    display:none; 
+    border-radius: 5px;
+    padding-left: 4px;
+    border: solid 1px grey;
 }
-/* slutt på css for locations */
+/* slutt på css for contact us*/
+
+/* Start på css for about*/
+
+main#about{
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;				
+    background-color: rgba(255,255,255,0.5);		
+    border-radius: 10px;		
+    padding-left: 50px;	
+    padding-right: 50px;
+    margin-bottom: 20px;		
+    color: black;		
+}
+
+img#family{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: table; 
+    border-radius: 10px;
+
+
+}
+figure{
+    float: right;
+    margin: 0 50px 10px 150px;
+    
+    
+}
+
+figcaption#family{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    margin-top: 15px;
+    
+}
+/* slutt på css for contact us*/
