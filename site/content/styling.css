@@ -289,7 +289,7 @@ main#location {
     margin-top: 2%;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.7);
     border-radius: 15px;
 }
 main#location section#locationDescription
@@ -317,6 +317,7 @@ main#location section#locationIMG
     float: right;
     width: 40%;
     margin-top:6%;
+    margin-bottom: 1%;
     margin-right: 5%;
     
 }
