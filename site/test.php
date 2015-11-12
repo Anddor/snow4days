@@ -25,7 +25,12 @@ if (!empty($_GET['submitted'])) {
     require('navbar.php');
     // Catch the output
     ob_start();
-    print_navbar($page, Page::$webpages);
+    print_html_start($page);
+    if ($page->template !== 'index_layout') {
+        echo '<header>';
+        print_navbar($page, Page::$webpages);
+        echo '</header>';
+    }
     $header = ob_get_clean();
 
     $footer = file_get_contents('footer.html');
