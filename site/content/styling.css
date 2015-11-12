@@ -144,11 +144,9 @@ nav ul.level3 a {
     background-color: rgba(82,212,255,1);
     box-shadow: 0px 2px 2px #888888;
 }
-@media screen and (min-device-height: 800px) {
-    nav ul.level2 > li:hover > ul.level3 {
-        opacity: 1;
-        display: block;
-    }
+nav ul.level2 > li.show > ul.level3 {
+    opacity: 1;
+    display: block;
 }
 
 nav ul.level3 li a {
@@ -175,14 +173,14 @@ nav ul.level3 li a {
 .centered{
     margin: auto;
 }
-
+/*
 #navbar {
     width: 100%;
     top: 200px;
     position: fixed;
     text-align: center;
 }
-
+*/
 #logo {
     width: 1074px;
     height: auto;
@@ -193,7 +191,7 @@ nav ul.level3 li a {
     display: block;
     background-color: rgba(172, 216, 255, 0.5);
 }
-
+/*
 #navbar ul {
     width: 800;
     list-style-type: none;
@@ -219,7 +217,7 @@ nav ul.level3 li a {
 #navbar li a:hover {
     background-color: aliceblue;
 }
-
+*/
 main#country p{margin: 10px;}
 main#country #countryDescription{
     float: right;

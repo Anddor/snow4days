@@ -60,7 +60,7 @@ EOL;
             }
             echo "</ul>";
         }
-        echo "</li>";
+        echo "</li>\n";
     }
 
 function print_navbar(Page $currentPage, $pages) {
@@ -91,7 +91,7 @@ function print_navbar(Page $currentPage, $pages) {
 </head>
 <body>
 <header>
-    <nav>
+    <nav id="navbar">
         <ul class="level1">
             <?php
             if ($pages['/'] instanceof Page) {
