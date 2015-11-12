@@ -222,9 +222,9 @@ nav ul.level3 li a {
 main#country {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 2%;
     width: 1000px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.7);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 20px;
@@ -238,10 +238,8 @@ main#country #countryDescription{
     float: right;
     width: 45%;
     height: 100%;
-    background-color: RGBA(190,190,190,0.4);
     margin-top: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
+    padding: 10px;
     border-radius: 10px;
 }
 main#country #countryMap{
@@ -259,18 +257,19 @@ main#country #countryMap img{
     border-radius: 10px;
 }
 main#country .countryLocation{
-    width: 78%;
-    background-color: RGBA(190,190,190,0.4);
-    margin-bottom: 10px;
-    margin-top: 10px;
+    width: 100%-20px;
+    margin: 10px;
+    padding: 10px;
     border-radius: 10px;
 }
 main#country #countryOrder{
-    float: right;
-    width: 20%;
-    background-color: RGBA(190,190,190,0.4);
-    margin-top: 10px;
+    float: left;
+    width: 48%;
+    height: 245px;
     border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px;
 }
 /* start på css for locations */
 
