@@ -2,8 +2,19 @@ body {
     color: black;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    background-image: url(background_image.jpeg);
-    background-size: 100%;
+    background-size: cover;
+}
+
+@media screen and (max-device-width: 1920px) {
+    body {
+        background-image: url("img/background_image_1920.jpeg");
+    }
+}
+
+@media screen and (min-device-width: 1921px) {
+    body {
+        background-image: url("background_image.jpeg");
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,7 +28,7 @@ a:link {
 }
 
 a:link:hover {
-    color: #406868;
+    color: #588282;
 }
 
 a:visited {
