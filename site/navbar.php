@@ -49,10 +49,12 @@
     function print_list_entry(Page $currentPage, Page $page, $level) {
         $current = ($currentPage == $page) ? ' class="current"' : '';
         $url = absolute_to_relative($currentPage->url, $page->url);
+        $underpagesExists = count($page->underpages);
+        $name = $underpagesExists ? $page->name . " ▾" : $page->name;
         echo <<<EOL
-<li><a href="$url" title="$page->description"$current>$page->name</a>
+<li><a href="$url" title="$page->description"$current>$name</a>
 EOL;
-        if (count($page->underpages)) {
+        if ($underpagesExists) {
             $new_level = $level + 1;
             echo "<ul class='level$new_level'>";
             foreach ($page->underpages as $underpage) {
