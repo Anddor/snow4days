@@ -272,7 +272,7 @@ main#location section#locationDescription
     float:left;
     width: 40%;
     margin-top: 1%;
-    margin-left: 3%;
+    margin-left: 5%;
     text-align: justify;
 }
 main#location section#locationDescription ul li 
@@ -284,15 +284,15 @@ main#location section#locationOrder
     float: right;
     width: 40%;
     margin-top: 1%;
-    margin-right: 3%;
+    margin-right: 5%;
     text-align: justify;
 }
 main#location section#locationIMG
 {
     float: right;
     width: 40%;
-    margin-top:1%;
-    margin-right: 4%;
+    margin-top:6%;
+    margin-right: 5%;
     
 }
 main#location section#locationIMG img#bilde
