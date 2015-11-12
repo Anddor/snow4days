@@ -13,19 +13,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* links */
 a:link {
-    color: #349292;
+    color: #265757;
 }
 
 a:link:hover {
-    color: #93D7D7;
+    color: #406868;
 }
 
 a:visited {
-    color: #D49F36;
+        color: #6d4628;
 }
 
 a:visited:hover {
-    color: #F4BF56;
+    color: #9e753c;
 }
 
 img {
