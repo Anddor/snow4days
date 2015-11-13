@@ -5,7 +5,6 @@
  * Date: 12.10.15
  * Time: 11:33
  */
-define('URL_ROOT', "http://{$_SERVER['HTTP_HOST']}" . dirname($_SERVER['SCRIPT_NAME']) . '/');
 require_once('include.php');
 
 
@@ -19,7 +18,7 @@ function main($server) {
             header("Location: " . URL_ROOT . "site.php/");
             die("Redirecting to <a href='site.php/'>site.php/</a>");
         }
-        if (preg_match('/\.html$|\.htm$/i', $server['PHP_SELF'])) {
+        if (preg_match('/\.html$/i', $server['PHP_SELF'])) {
             header("HTTP/1.1 301 Moved Permanently");
             $new_url = URL_ROOT . "site.php" . parseUrl($server['REQUEST_URI']);
             header("Location: " . $new_url);
