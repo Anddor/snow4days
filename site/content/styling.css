@@ -223,29 +223,31 @@ main#country {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2%;
-    width: 1000px;
+    width: 80%;
     background-color: rgba(255,255,255,0.7);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 20px;
     color: black;
-    font-size: 110%;
+    text-align: justify;
 }
 
-main#country p{margin: 10px;}
+main#country p,a{margin: 10px;}
 
 main#country #countryDescription{
-    float: right;
+    float:left;
     width: 45%;
     height: 100%;
-    margin-top: 10px;
-    padding: 10px;
+    padding-top: 0;
+    padding-left: 2%;
     border-radius: 10px;
 }
 main#country #countryMap{
-    float: left;
-    width: 50%;
-    margin-top: 10px;
+    float: right;
+    width: 45%;
+    padding-top: 1%;
+    padding-right: 2%;
+    padding-bottom: 1%;
     margin-left: 10px;
 }
 main#country #countryMap img{
@@ -264,12 +266,10 @@ main#country .countryLocation{
 }
 main#country #countryOrder{
     float: left;
-    width: 48%;
-    height: 245px;
+    width: 45%;
     border-radius: 10px;
-    margin-top: 20px;
     margin-left: 10px;
-    padding: 10px;
+    padding-left: 2%;
 }
 /* start på css for locations */
 
