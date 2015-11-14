@@ -354,8 +354,8 @@ main#contact {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 20px;				
-    background-color: rgba(255,255,255,0.5);		
+    margin-top: 2%;				
+    background-color: rgba(255,255,255,0.7);		
     border-radius: 10px;		
     padding: 10px;		
     margin-bottom: 20px;		
@@ -383,15 +383,16 @@ main#contact section#FAQ{
 /* Start på css for about*/
 
 main#about{
-    position: absolute;
+    position: relative;
     width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 20px;				
-    background-color: rgba(255,255,255,0.5);		
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;				
+    background-color: rgba(255,255,255,0.7);		
     border-radius: 10px;		
-    padding-left: 50px;	
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin-bottom: 20px;		
     color: black;		
 }
