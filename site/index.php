@@ -6,7 +6,7 @@
  * Time: 11:11
  */
 // Redirect to site.php script
-require_once('prepend.php');
+require_once('include.php');
 
 header("HTTP/1.1 Moved Permanently");
 header("Location: " . URL_ROOT . "site.php/");
