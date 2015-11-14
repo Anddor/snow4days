@@ -245,32 +245,31 @@ nav ul.level3 li a {
 main#country {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    width: 1000px;
-    max-width: 100%;
-    background-color: rgba(255,255,255,0.5);
+    margin-top: 2%;
+    width: 80%;
+    background-color: rgba(255,255,255,0.7);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 20px;
     color: black;
-    font-size: 110%;
+    text-align: justify;
 }
 
-main#country p{margin: 10px;}
+main#country p,a{margin: 10px;}
 main#country #countryDescription{
-    float: right;
+    float:left;
     width: 45%;
-    height: auto;
-    background-color: RGBA(190,190,190,0.4);
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
+    height: 100%;
+    padding-top: 0;
+    padding-left: 2%;
     border-radius: 10px;
 }
 main#country #countryMap{
-    float: left;
-    width: 50%;
-    margin-top: 10px;
+    float: right;
+    width: 45%;
+    padding-top: 1%;
+    padding-right: 2%;
+    padding-bottom: 1%;
     margin-left: 10px;
 }
 main#country #countryMap img{
@@ -282,18 +281,17 @@ main#country #countryMap img{
     border-radius: 10px;
 }
 main#country .countryLocation{
-    width: 78%;
-    background-color: RGBA(190,190,190,0.4);
-    margin-bottom: 10px;
-    margin-top: 10px;
+    width: 100%-20px;
+    margin: 10px;
+    padding: 10px;
     border-radius: 10px;
 }
 main#country #countryOrder{
-    float: right;
-    width: 20%;
-    background-color: RGBA(190,190,190,0.4);
-    margin-top: 10px;
+    float: left;
+    width: 45%;
     border-radius: 10px;
+    margin-left: 10px;
+    padding-left: 2%;
 }
 /* start på css for locations */
 
@@ -421,4 +419,5 @@ figcaption#family{
     margin-top: 15px;
     
 }
+
 /* slutt på css for contact us*/
