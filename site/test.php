@@ -5,7 +5,6 @@
  * look when accessed through the server.
  *
  */
-require_once('prepend.php');
 require_once('include.php');
 
 generatePagesDictionary();
@@ -26,7 +25,12 @@ if (!empty($_GET['submitted'])) {
     require('navbar.php');
     // Catch the output
     ob_start();
-    print_navbar($page, Page::$webpages);
+    print_html_start($page);
+    if ($page->template !== 'index_layout') {
+        echo '<header>';
+        print_navbar($page, Page::$webpages);
+        echo '</header>';
+    }
     $header = ob_get_clean();
 
     $footer = file_get_contents('footer.html');
@@ -86,8 +90,7 @@ EOL;
 <body>
 <form action="<?= basename(__FILE__) ?>" method="get">
     <h2>Get the HTML that will surround your HTML file</h2>
-    <p>Pick a target page, and you will get HTML which you can put in the file for previewing.
-    Just remember to remove it before commiting it to Git!</p>
+    <p>Pick a target page, and you will get HTML which you can put in the file for previewing.</p>
     <p>
         <label for="template">Which page?</label><br/>
         <select id="template" name="template" onchange="this.form.submit();">

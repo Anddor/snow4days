@@ -1,1 +1,46 @@
-so this thing happened,
+<!--
+FILE NAME: /contact_us.html
+WRITTEN BY:  Sebsatian Olafsson
+WHEN:  October 2015
+PURPOSE:  Inform users on how to contact the company to order trips, as well as send questions by email. Includes FAQ.
+-->
+<main  id="contact">
+    <section id="contactInfo">
+        <h1>Contact Us</h1>
+        <h4>Address: 42 Wallaby Way, Sydney</h4>
+        <h4>Phone Number: 1-800-GET SNOW</h4>
+        <h4>Email Address: <a href="mailto:contact@snow4days.com">contact@snow4days.com</a></h4>
+    </section>
+    <section id= "FAQ">
+        <h1>F.A.Q.</h1>
+
+        <div onclick="javascript:toggle('toggleText');"> <!-- When clicking the questions, the answer collapses. --> 
+        <p><h4><a href="#1">Where can I order?</a></h4></p>
+        <div id="toggleText" class="hide"><p>Head over to our "About Us" page for info on where to order your experience.</p></div>
+        </div>
+
+        <div onclick="javascript:toggle('toggleText2');">
+        <p><h4><a href="#2">When does the season start?</a></h4></p>
+        <div id="toggleText2" class="hide"><p>From November 20 to February 20.</p></div>
+        </div>
+
+        <div onclick="javascript:toggle('toggleText3');">
+        <p><h4><a href="#3">Is the suitable for beginners?</a></h4></p>
+        <div id="toggleText3" class="hide"><p>Due to the steep slopes and advanced terrain, our winter experiences are encouraged for experienced skiers. </p></div>
+        </div>
+
+        <div onclick="javascript:toggle('toggleText4');">
+        <p><h4><a href="#4">Where can I order?</a></h4></p>
+        <div id="toggleText4" class="hide"><p>By calling our phone number listed to the left on this page.</p></div>
+        </div>
+
+        <div onclick="javascript:toggle('toggleText5');">
+        <p><h4><a href="#5">When can I order?</a></h4></p>
+        <div id="toggleText5" class="hide"><p>Our operators are available 24/7/365, so you can call anytime.</p></div>
+        </div>
+
+        <div onclick="javascript:toggle('toggleText6');">
+        <p><h4><a href="#6">What if I have more questions?</a></h4></p>
+        <div id="toggleText6" class="hide"><p>You can Email us at <a href="contact@snow4days.com">contact@snow4days.com</a> for further inqueries.</p></div>
+    </section>
+</main>    
