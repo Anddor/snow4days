@@ -138,7 +138,7 @@ nav ul.level2 > li {
 }
 
 nav ul.level2 > li > a {
-    width: 90px;
+    min-width: 80px;
 }
 
 nav ul.level1 > li > a {
