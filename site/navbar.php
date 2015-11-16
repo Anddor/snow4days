@@ -104,6 +104,9 @@ EOL;
 function print_navbar(Page $currentPage, $pages) {
 ?>
     <nav id="navbar">
+        <canvas id="particle-canvas">
+            
+        </canvas>
         <ul class="level1">
             <?php
             if ($pages['/'] instanceof Page) {
