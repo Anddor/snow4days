@@ -392,7 +392,8 @@ main#about{
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 20px;		
-    color: black;		
+    color: black;
+    text-align: justify;
 }
 
 figure#family img{
