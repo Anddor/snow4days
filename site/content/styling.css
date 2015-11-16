@@ -421,3 +421,16 @@ figure#family figcaption {
 }
 
 /* slutt på css for contact us*/
+
+main {
+    margin-bottom: 2em;
+}
+
+footer {
+    text-align: center;
+    background: rgba(250,254,254,0.9);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8em;
+}
