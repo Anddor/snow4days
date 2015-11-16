@@ -243,14 +243,15 @@ nav ul.level3 li a {
 */
 
 main#country {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
+    position: absolute;
     width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
     background-color: rgba(255,255,255,0.7);
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
     color: black;
     text-align: justify;
 }
@@ -381,10 +382,10 @@ main#contact section#FAQ{
 /* Start på css for about*/
 
 main#about{
-    position: relative;
+    position: absolute;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 2%;				
     background-color: rgba(255,255,255,0.7);		
     border-radius: 10px;		
