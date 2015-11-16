@@ -13,6 +13,7 @@ define('JS_ANIMATION', 2);
 define('JS_VIDEO', 4);
 define('JS_MENU', 8);
 define('JS_ALL', 15);
+define('JS_DEFAULT', JS_ANIMATION | JS_MENU);
 
 error_reporting(E_ALL);
 ini_set('display_errors', "On");
@@ -23,7 +24,7 @@ class Page {
     public $template;
     public $name;
     public $description;
-    public $javascripts = JS_ALL;
+    public $javascripts = JS_DEFAULT;
     public $underpages = array();
     public static $webpages = array();
 
@@ -60,7 +61,7 @@ function default_layout(Page $page) {
     print_html_start($page);
     echo '<header>';
     print_navbar($page, Page::$webpages);
-    echo '</header>';
+    echo "</header>\n<!-- End of auto-generated code -->\n";
     print_page_content($page);
     require('footer.html');
 }
@@ -80,10 +81,11 @@ function print_page_content(Page $page) {
 function index_layout(Page $page) {
     require('navbar.php');
     print_html_start($page);
+    echo "\t<!-- End of auto-generated code -->\n";
     // Get the navbar HTML
     ob_start();
     print_navbar($page, Page::$webpages);
-    $navbarHtml = ob_get_clean();
+    $navbarHtml = "<!-- Start auto-generated menu -->\n" . ob_get_clean() . "\n\t<!-- End auto-generated menu -->";
     // Get the page HTML
     ob_start();
     print_page_content($page);
@@ -182,7 +184,8 @@ function generatePagesDictionary()
         new Page('/contact', '/contact_us.html', 'Contact'),
         new Page('/sitemap', '/sitemap.html', 'Sitemap')
     );
-    Page::$webpages['/']->setTemplate('index_layout');
+    Page::$webpages['/']->setTemplate('index_layout')->setJavascripts(JS_DEFAULT | JS_VIDEO);
+    Page::$webpages['/contact']->setJavascripts(JS_DEFAULT | JS_COLLAPSE);
 }
 
 function printErrorPage() {
