@@ -256,7 +256,7 @@ main#country {
     text-align: justify;
 }
 
-main#country p,a{margin: 10px;}
+main#country p {margin: 10px;}
 main#country #countryDescription{
     float:left;
     width: 45%;
