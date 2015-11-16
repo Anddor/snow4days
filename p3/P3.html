@@ -15,13 +15,292 @@
 
     <h5>November 16th 2015</h5>
 
-    
+    <p><strong>Client name:</strong> Mike Hawk</p>
 
 
 </header>
 
 <main>
 
+
+<h2>Startpage</h2>
+
+    <p>Link to begin touring: <a href="http://org.ntnu.no/it2805snow4days/site/site.php/">http://org.ntnu.no/it2805snow4days/site/site.php/</a></p>
+
+    <h2>Fulfilling minimum JavaScript requirements</h2>
+
+    <p>Andreas fulfilled his JavaScript requirements with his animation script for the navbar.</p>
+
+    <p>Marius fulfilled his JavaScript requirements with a script that would remove the background video from the front page if the users screen was too smaller than a set value (1300 pixels)</p>
+
+    <p>Jakob fulfilled his Javascript requirements by helping with different minor tasks, as only four javascripts were needed and we are five members.</p>
+
+    <p>Sebastian fulfilled his JavaScript requirements with a collapse and expand function on frequently asked questions on the Contact Us page.</p>
+
+    <p>Thorben fulfilled his JavaScript with the navbar menu script, which shows one submenu at any given time. There is a delay between the user hovering over a menu and the menu appearing/disappearing, to prevent accidents where the user didn't intend to open, close or change the menu.</p>
+
+    <h2>Changes We Made</h2>
+
+    <p>We had a plan for the styling of the pages, but during the process of making the website we ended up with making some changes, which are listed below:</p>
+
+    <p><strong>Changes to <code>index.html</code>:</strong> <br />
+        Some superficial changes was made to the frontpage. The company logo was changed to have a transparent background. This way, the logo could be larger without blocking the view of the background video.</p>
+
+    <p><strong>Changes to <code>location_template.html</code>:</strong>  Instead of making a template we ended up just starting on one of the countries and copy the HTML into the other pages since the only difference in them are the text and picture. This made more sense since we don’t use a template to load in the pages, and fill them with text and pictures. </p>
+
+    <p><strong>Changes to <code>country-pages</code> (France, Austria, Colorado):</strong> Instead of having a picture from each country as the background we ended up having the same picture throughout the whole website (not on the index page). The picture and the country description switched places to get rid of blank space, making the site look more tidy and appealing. There are also no picture in the brief description of the locations located on the bottom of the pages, as we felt it was disturbing and didn’t fit in.</p>
+
+    <p><strong>Changes to <code>travel_template.html</code>:</strong> Started making a template, but decided on Instead of making a template we ended up just starting on one of the locations and copy the HTML into the other pages since the only difference in them are the text and picture. This made more sense since we don’t use a template to load in the pages, and fill them with text and pictures. </p>
+
+    <p><strong>Changes to <code>locations-pages</code> (Aspen, Val Thorens and so forth):</strong> Instead of having one picture as the background for the travel pages, that is different from the other pages we ended up using the same background picture for all the pages. instead of having a map of the location on the site we changed it to a picture, since a google-map didn’t make much sense to have, and it looks better with a picture of the location enticing the users to take a trip there. we also added information about how to order a trip to the locations, at each of the locations so that the user would have the information there right away instead of having to look for it some other place. In the original design only the text had a white see-through background, but we changed it so that all the content is inside the same white box. This made the page seem more put together and not so chopped up in pieces. </p>
+
+    <p><strong>Changes to <code>contact_us.html</code>:</strong> <br />
+        Instead of having the content leftwards on the page, it has been centered to the middle. Along with the contact information about the company, there is also frequently asked questions for quick reference on simple, often-asked questions.</p>
+
+    <p><strong>Changes to <code>about.html</code>:</strong> <br />
+        A picture was added to this page, as we included a customer testimony to encourage the users to purchase from this company. Content has also been centered to fit with the other page’s style. </p>
+
+    <p><strong>Changes to <code>sitemap.html</code>:</strong> <br />
+        <strong>Changes to <code>footer.html</code>:</strong> Added "signature". <br />
+        <strong>Changes to <code>navbar.php</code>:</strong> <br />
+        <strong>Changes to <code>site.php</code>:</strong> URL rewriting feature was added. <br />
+        <strong>Changes to <code>menu.js</code>:</strong> <br />
+        <strong>Changes to intended CSS:</strong> We made some changes to the navbar, making it more like the traditional drop down menu. We also changed the colours to the links to get a better contrast to the background image so that they would be easier to read. We also changed from having #FAFEFE as the background colour to having a background image, and instead having a white background behind the text and images; rgba(255, 255, 255, 0.7).</p>
+
+    <p><strong>Added: <code>include.php</code></strong> <br />
+        Has code which is used by site.php and test.php.</p>
+
+    <p><strong>Added: <code>test.php</code></strong> <br />
+        A "secret" script, which is used for convenience during development. Using this script, developers can copy and paste header and footer into their HTML, to see what their HTML looks like locally (without the need to install PHP on their computers). The copy-pasted material is neither used nor required when accessing the site through PHP, so modularity is ensured. See the modularity section for details on this.</p>
+
+    <h2>Modularity</h2>
+
+    <p>PHP is used to:</p>
+
+    <ol>
+        <li>perform "URL rewriting", so that the URLs look nicer (with no .html ending).
+            The site should be accessed through "site.php", and the actual HTML files are
+            located in a folder "content", which users are not supposed to access directly.</li>
+        <li>automatically generate the menu, so that it isn't written by hand. Among other things,
+            this enables us to use relative links while still being modular.</li>
+        <li>include header and footer on every page, so that any changes to those
+            only need to be done in one place.</li>
+    </ol>
+
+    <p>More precisely, PHP looks at the HTML files in the content directory, and puts the <code>&lt;main&gt;</code> element and its contents between the header and the footer. This means that everything in the HTML file that isn't inside <code>&lt;main&gt;</code> is discarded, enabling developers to copy and paste headers and footers into their HTML files (to preview how it looks) without sacrificing modularity (since the copy+pasted material is discarded when accessed through PHP).</p>
+
+    <p>A positive side effect of using PHP instead of JavaScript, is that search engines will be able to see the menus, which they cannot if the menus are created with JavaScripts (since we cannot assume Google runs JavaScript on their spiders). Thus, the site is easier to find through Google (if we had decided to tell Google about it, which we won't since it's a site for a company which doesn't exist).</p>
+
+    <h2>Updated Organizational Scheme</h2>
+
+    <ul>
+        <li><code>content/</code>
+            <ul>
+                <li><code>index.html</code></li>
+                <li><code>locations/</code>
+                    <ul>
+                        <li><code>france/</code>
+                            <ul>
+                                <li><code>france.html</code></li>
+                                <li><code>charmonix.html</code></li>
+                                <li><code>val_thorens.html</code></li>
+                            </ul></li>
+                        <li><code>austria/</code>
+                            <ul>
+                                <li><code>austria.html</code></li>
+                                <li><code>bad_gastein.html</code></li>
+                                <li><code>st_anton.html</code></li>
+                            </ul></li>
+                        <li><code>colorado/</code>
+                            <ul>
+                                <li><code>colorado.html</code></li>
+                                <li><code>aspen.html</code></li>
+                                <li><code>telluride.html</code></li>
+                            </ul></li>
+                    </ul></li>
+                <li><code>about_us.html</code></li>
+                <li><code>contact_us.html</code></li>
+                <li><code>img/</code>
+                    <ul>
+                        <li><code>colorado.svg</code></li>
+                        <li><code>france.png</code></li>
+                        <li><code>logo.png</code></li>
+                        <li><code>logo_white.png</code></li>
+                        <li><code>austria.png</code></li>
+                        <li><code>aspen_resize.jpg</code></li>
+                        <li><code>background_image_1920.jpg</code></li>
+                        <li><code>background_image_portrait.jpg</code></li>
+                        <li><code>bad_gastein_resize.jpg</code></li>
+                        <li><code>charmonix_resize.jpg</code></li>
+                        <li><code>st_anton_resize.jpg</code></li>
+                        <li><code>telluride_resize.jpg</code></li>
+                        <li><code>val_thorens_resize.jpg</code></li>
+                        <li><code>family.png</code></li>
+                    </ul></li>
+                <li><code>videos/</code>
+                    <ul>
+                        <li><code>helatrix2.mp4</code></li>
+                    </ul></li>
+                <li><code>js/</code>
+                    <ul>
+                        <li><code>video.js</code></li>
+                        <li><code>menu.js</code></li>
+                        <li><code>animation.js</code></li>
+                        <li><code>collapse.js</code></li>
+                    </ul></li>
+                <li><code>styling.css</code></li>
+                <li><code>sitemap.html</code></li>
+            </ul></li>
+        <li><code>site.php</code></li>
+        <li><code>index.php</code></li>
+        <li><code>test.php</code></li>
+    </ul>
+
+    <h2>Final Work Division</h2>
+
+    <table>
+        <colgroup>
+            <col style="width: 20%">
+            <col style="width: 50%">
+            <col style="width: 30%">
+        </colgroup>
+        <thead>
+
+
+        <tr>
+            <th>Filename</th>
+            <th>Description</th>
+            <th>Person responsible</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>index.html</td>
+            <td>Home page. HTML5 Video on loop, few distractions on the page.</td>
+            <td>Andreas</td>
+        </tr>
+        <tr>
+            <td>colorado.html</td>
+            <td>Locations page for Colorado. Links to aspen.html and telluride.html</td>
+            <td>Jakob</td>
+        </tr>
+        <tr>
+            <td>france.html</td>
+            <td>Location page for France. Links to charmonix.html and val_thorens.html</td>
+            <td>Jakob</td>
+        </tr>
+        <tr>
+            <td>austria.html</td>
+            <td>Locations page for Austria. Links to bad_gastien.html and st_anton.html</td>
+            <td>Jakob</td>
+        </tr>
+        <tr>
+            <td>chamonix.html</td>
+            <td>Travel page for Chamonix.</td>
+            <td>Marius Aarsnes</td>
+        </tr>
+        <tr>
+            <td>val_thorens.html</td>
+            <td>Travel page for Val Thorens.</td>
+            <td>Marius Aarsnes</td>
+        </tr>
+        <tr>
+            <td>bad_gastein.html</td>
+            <td>Travel page for Bad Gastein.</td>
+            <td>Marius Aarsnes</td>
+        </tr>
+        <tr>
+            <td>st_anton.html</td>
+            <td>Travel page for St. Anton.</td>
+            <td>Marius Aarsnes</td>
+        </tr>
+        <tr>
+            <td>aspen.html</td>
+            <td>Travel page for Aspen.</td>
+            <td>Marius Aarsnes</td>
+        </tr>
+        <tr>
+            <td>telluride.html</td>
+            <td>Travel page for Telluride.</td>
+            <td>Marius Aarsnes</td>
+        </tr>
+        <tr>
+            <td>navbar.php</td>
+            <td>Navbar for every page</td>
+            <td>Thorben Dahl</td>
+        </tr>
+        <tr>
+            <td>contact_us.html</td>
+            <td>Page for how to contact us, where questions will be directed to and where you can order trips from.</td>
+            <td>Sebastian Olafsson</td>
+        </tr>
+        <tr>
+            <td>about_us.html</td>
+            <td>About our company, what we do, what we hope to achieve.</td>
+            <td>Sebastian Olafsson</td>
+        </tr>
+        <tr>
+            <td>sitemap.html</td>
+            <td>Map of the site</td>
+            <td>Andreas</td>
+        </tr>
+        <tr>
+            <td>footer.html</td>
+            <td>Footer is also same for every page, so it stays constant and consistent.</td>
+            <td>Thorben Dahl</td>
+        </tr>
+        <tr>
+            <td>styling.css</td>
+            <td>Styling linked to all pages. different look on different pages will be achieved through css selectors</td>
+            <td>Andreas, Thorben, Sebastian, Marius, Jakob</td>
+        </tr>
+        <tr>
+            <td>/site.php</td>
+            <td>This is the user's portal to the website - all access should be done through this script. Reuses HTML so that we won't duplicate the header and footer for every page. In reality, this script includes other PHP files (namely include.php and navbar.php, for better code structure), but the end user never sees this.</td>
+            <td>Thorben Dahl</td>
+        </tr>
+        <tr>
+            <td>/test.php</td>
+            <td>Secret script, enabling developers to get code they can copy+paste into their HTML file to preview how it looks locally, without installing a PHP server.</td>
+            <td>Thorben Dahl</td>
+        </tr>
+        <tr>
+            <td>/index.php</td>
+            <td>Redirects the user to site.php</td>
+            <td>Thorben Dahl</td>
+        </tr>
+        <tr>
+            <td>collapse.js</td>
+            <td>JavaScript for collapsing drop-down sections. Say a F.A.Q., you click on a question and the answer collapses.</td>
+            <td>Sebastian, Jakob</td>
+        </tr>
+        <tr>
+            <td>animation.js</td>
+            <td>JavaScript for animations, such as fading contents.</td>
+            <td>Andreas,Jakob</td>
+        </tr>
+        <tr>
+            <td>video.js</td>
+            <td>JavaScript for ensuring only desktop and tablet users must deal with the video on the front page.</td>
+            <td>Marius Aarsnes, Jakob</td>
+        </tr>
+        <tr>
+            <td>menu.js</td>
+            <td>Javascript for the navbar, dropdown.</td>
+            <td>Thorben, Jakob</td>
+        </tr>
+        <tr>
+            <td>Final control</td>
+            <td>double checking each file for errors in w3c validator, also checked css</td>
+            <td>Jakob</td>
+        </tr>
+        <tr>
+            <td>Artwork (logo)</td>
+            <td>Snow4Days logo</td>
+            <td>Thorben</td>
+        </tr>
+        </tbody>
+    </table>
 </main>
 </body>
 </html>
