@@ -9,6 +9,8 @@ window.onload = function () {
     
     var context = canvas.getContext("2d");
     var maxParticles = 50;
+
+    var counter = 0;
     
     function createParticle() {
     
